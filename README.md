@@ -1,2 +1,2 @@
-# fictoan-css
+# Fictoan CSS
 The plain CSS version of Fictoan
