@@ -2,6 +2,7 @@
     display        : flex;
     flex-direction : column;
     width          : 100%;
+    background-color: red;
 }
 
 .portion.horizontal { flex-direction : row; }
@@ -69,7 +70,69 @@
 .portion[data-desktop-span="24"] { grid-column : span 24; }
 
 
+@media all and (max-width : 600px) {
+    .portion[data-mobile-span="1"] { grid-column : span 1; }
 
+    .portion.one-twelfth-on-mobile,
+    .portion[data-mobile-span="2"] { grid-column : span 2; }
+
+    .portion.one-eighth-on-mobile,
+    .portion[data-mobile-span="3"] { grid-column : span 3; }
+
+    .portion.one-sixth-on-mobile,
+    .portion[data-mobile-span="4"] { grid-column : span 4; }
+
+    .portion[data-mobile-span="5"] { grid-column : span 5; }
+
+    .portion.one-fourth-on-mobile,
+    .portion[data-mobile-span="6"] { grid-column : span 6; }
+
+    .portion[data-mobile-span="7"] { grid-column : span 7; }
+
+    .portion.one-third-on-mobile,
+    .portion[data-mobile-span="8"] { grid-column : span 8; }
+
+    .portion[data-mobile-span="9"] { grid-column : span 9; }
+
+    .portion.five-twelfth-on-mobile,
+    .portion[data-mobile-span="10"] { grid-column : span 10; }
+
+    .portion[data-mobile-span="11"] { grid-column : span 11; }
+
+    .portion.half-on-mobile,
+    .portion[data-mobile-span="12"] { grid-column : span 12; }
+
+    .portion[data-mobile-span="13"] { grid-column : span 13; }
+
+    .portion.seven-twelfth-on-mobile,
+    .portion[data-mobile-span="14"] { grid-column : span 14; }
+
+    .portion[data-mobile-span="15"] { grid-column : span 15; }
+
+    .portion.two-third-on-mobile,
+    .portion[data-mobile-span="16"] { grid-column : span 16; }
+
+    .portion[data-mobile-span="17"] { grid-column : span 17; }
+
+    .portion.three-fourth-on-mobile,
+    .portion[data-mobile-span="18"] { grid-column : span 18; }
+
+    .portion[data-mobile-span="19"] { grid-column : span 19; }
+
+    .portion.five-sixth-on-mobile,
+    .portion[data-mobile-span="20"] { grid-column : span 20; }
+
+    .portion.seven-eighth-on-mobile,
+    .portion[data-mobile-span="21"] { grid-column : span 21; }
+
+    .portion.eleven-twelfth-on-mobile,
+    .portion[data-mobile-span="22"] { grid-column : span 22; }
+
+    .portion[data-mobile-span="23"] { grid-column : span 23; }
+
+    .portion.whole-on-mobile,
+    .portion[data-mobile-span="24"] { grid-column : span 24; }
+}
 
 
 @media all and (min-width : 601px) and (max-width : 900px) {
@@ -202,68 +265,4 @@
 
     .portion.whole-on-tab-ls,
     .portion[data-tabLS-span="24"] { grid-column : span 24; }
-}
-
-@media all and (max-width : 600px) {
-    .portion[data-mobile-span="1"] { grid-column : span 1; }
-
-    .portion.one-twelfth-on-mobile,
-    .portion[data-mobile-span="2"] { grid-column : span 2; }
-
-    .portion.one-eighth-on-mobile,
-    .portion[data-mobile-span="3"] { grid-column : span 3; }
-
-    .portion.one-sixth-on-mobile,
-    .portion[data-mobile-span="4"] { grid-column : span 4; }
-
-    .portion[data-mobile-span="5"] { grid-column : span 5; }
-
-    .portion.one-fourth-on-mobile,
-    .portion[data-mobile-span="6"] { grid-column : span 6; }
-
-    .portion[data-mobile-span="7"] { grid-column : span 7; }
-
-    .portion.one-third-on-mobile,
-    .portion[data-mobile-span="8"] { grid-column : span 8; }
-
-    .portion[data-mobile-span="9"] { grid-column : span 9; }
-
-    .portion.five-twelfth-on-mobile,
-    .portion[data-mobile-span="10"] { grid-column : span 10; }
-
-    .portion[data-mobile-span="11"] { grid-column : span 11; }
-
-    .portion.half-on-mobile,
-    .portion[data-mobile-span="12"] { grid-column : span 12; }
-
-    .portion[data-mobile-span="13"] { grid-column : span 13; }
-
-    .portion.seven-twelfth-on-mobile,
-    .portion[data-mobile-span="14"] { grid-column : span 14; }
-
-    .portion[data-mobile-span="15"] { grid-column : span 15; }
-
-    .portion.two-third-on-mobile,
-    .portion[data-mobile-span="16"] { grid-column : span 16; }
-
-    .portion[data-mobile-span="17"] { grid-column : span 17; }
-
-    .portion.three-fourth-on-mobile,
-    .portion[data-mobile-span="18"] { grid-column : span 18; }
-
-    .portion[data-mobile-span="19"] { grid-column : span 19; }
-
-    .portion.five-sixth-on-mobile,
-    .portion[data-mobile-span="20"] { grid-column : span 20; }
-
-    .portion.seven-eighth-on-mobile,
-    .portion[data-mobile-span="21"] { grid-column : span 21; }
-
-    .portion.eleven-twelfth-on-mobile,
-    .portion[data-mobile-span="22"] { grid-column : span 22; }
-
-    .portion[data-mobile-span="23"] { grid-column : span 23; }
-
-    .portion.whole-on-mobile,
-    .portion[data-mobile-span="24"] { grid-column : span 24; }
 }
