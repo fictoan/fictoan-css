@@ -1,0 +1,16 @@
+
+/*  COLOURS  //////////////////////////////////////////////  */
+:root {
+    --hue      : hsl(212, 100%, 54%);
+    --tint     : hsl(212, 100%, 96%);
+    --shade    : hsl(212, 100%, 04%);
+    --analogue : hsl( 22,  90%, 68%);
+    --accent   : hsl(168,  98%, 40%);
+}
+
+/*  TYPOGRAPHY  ///////////////////////////////////////////  */
+:root {
+    --font-sans           : "SF Pro";
+    --heading-line-height : 1.4em;
+    --heading-text-colour : var(--hue);
+}
