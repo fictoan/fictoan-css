@@ -1,16 +1,58 @@
-
 /*  COLOURS  //////////////////////////////////////////////  */
 :root {
     --hue      : hsl(212, 100%, 54%);
-    --tint     : hsl(212, 100%, 96%);
+    --tint     : hsl(212, 100%, 98%);
     --shade    : hsl(212, 100%, 04%);
-    --analogue : hsl( 22,  90%, 68%);
-    --accent   : hsl(168,  98%, 40%);
+    --analogue : hsl(22, 90%, 68%);
+    --accent   : hsl(168, 98%, 40%);
+}
+
+:root {
+    --body-bg-colour : var(--tint);
+    --selection-bg   : var(--hue);
+    --selection-text : var(--tint);
 }
 
 /*  TYPOGRAPHY  ///////////////////////////////////////////  */
+/*  FONTS  ------------------------  */
 :root {
-    --font-sans           : "SF Pro";
-    --heading-line-height : 1.4em;
-    --heading-text-colour : var(--hue);
+    --font-sans  : "SF Pro", sans-serif;
+    --font-serif : "Times New Roman", serif;
+    --font-mono  : "SF Mono", serif;
+}
+
+/*  HEADINGS  ---------------------  */
+:root {
+    --headings-font-family     : var(--font-sans);
+    --headings-font-weight     : 600;
+    --headings-text-colour     : var(--hue);
+    --headings-line-height     : 1.4em;
+    --headings-base-size       : 1;
+    --headings-size-multiplier : 1.24;
+}
+
+/*  PARAS  ------------------------  */
+:root {
+    --paras-font-family : var(--font-sans);
+    --paras-font-weight : 400;
+    --paras-font-size   : 1em;
+    --paras-text-colour : var(--shade);
+    --paras-line-height : 1.2em;
+}
+
+/*  LINKS  ------------------------  */
+:root {
+    --links-font-family    : var(--font-sans);
+    --links-font-weight    : 400;
+
+    --links-default-colour : var(--analogue);
+    --links-hover-colour   : var(--analogue);
+}
+
+/*  CODE  -------------------------  */
+:root {
+    --code-font-family : var(--font-mono);
+
+    --code-text-colour : var(--analogue);
+    --code-bg-colour   : var(--analogue);
 }

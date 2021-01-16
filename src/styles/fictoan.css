@@ -1,2 +1,4 @@
 @import "components/layout/row.css";
 @import "components/layout/portion.css";
+@import "components/typography/typography.css";
+@import "theme/theme-light.css";

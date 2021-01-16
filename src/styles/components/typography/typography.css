@@ -1,26 +1,26 @@
 body {
-    font-size        : ;
-    line-height      : ;
-    font-family      : var(--font-sans);
+    font-size        : var(--paras-font-size);
+    line-height      : var(--paras-line-height);
+    font-family      : var(--paras-font-family);
     word-wrap        : normal;
     text-rendering   : optimizeLegibility;
-    background-color : ;
+    background-color : var(--body-bg-colour);
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family : ${(props: GlobalStyledProps) => props.theme.text.headings.font};
-    font-weight : ${(props: GlobalStyledProps) => props.theme.text.headings.weight};
-    color       : ${(props: GlobalStyledProps) => props.theme.text.headings.color};
-    line-height : var(--heading-line-height);
+    font-family : var(--headings-font-family);
+    font-weight : var(--headings-font-weight);
+    color       : var(--headings-text-colour);
+    line-height : var(--headings-line-height);
     margin      : 0;
 }
 
-h1 { font-size : ; }
-h2 { font-size : ; }
-h3 { font-size : ; }
-h4 { font-size : ; }
-h5 { font-size : ; }
-h6 { font-size : ; }
+h1 { font-size : calc(var(--headings-size-multiplier) * 4.8em); }
+h2 { font-size : calc(var(--headings-size-multiplier) * 3.6em); }
+h3 { font-size : calc(var(--headings-size-multiplier) * 2.4em); }
+h4 { font-size : calc(var(--headings-size-multiplier) * 1.8em); }
+h5 { font-size : calc(var(--headings-size-multiplier) * 1.4em); }
+h6 { font-size : calc(var(--headings-size-multiplier) * 1.2em); }
 
 @media all and (max-width : 720px) {
     h1 { font-size : 32px; }
@@ -35,20 +35,20 @@ h6 { font-size : ; }
 }
 
 p {
-    font-family : ${(props: GlobalStyledProps) => props.theme.text.paras.font};
-    color       : ${(props: GlobalStyledProps) => props.theme.text.paras.color};
+    font-family : var(--paras-font-family);
+    color       : var(--paras-text-colour);
 }
 
 a {
     cursor      : pointer;
-    font-family : ${(props: GlobalStyledProps) => props.theme.text.paras.font};
-    color       : ${(props: GlobalStyledProps) => props.theme.text.links.default.color};
+    font-family : var(--links-font-family);
+    color       : var(--links-default-colour);
     font-weight : bold;
     transition  : all 0.2s;
     width       : fit-content;
 }
 
-a:not(.ff-button):hover { color : ${(props: GlobalStyledProps) => props.theme.text.links.onHover.color}; }
+a:not(.ff-button):hover { color : var(--links-hover-colour); }
 
 a:active { opacity: 0.72; }
 
@@ -70,23 +70,23 @@ a:active { opacity: 0.72; }
 .text-large  { font-size : 120%; }
 .text-huge   { font-size : 160%; }
 
-.font-sans  { font-family : ${(props: GlobalStyledProps) => props.theme.text.font.sans}; }
-.font-serif { font-family : ${(props: GlobalStyledProps) => props.theme.text.font.serif}; }
-.font-mono  { font-family : ${(props: GlobalStyledProps) => props.theme.text.font.mono}; }
+.font-sans  { font-family : var(--font-sans); }
+.font-serif { font-family : var(--font-serif); }
+.font-mono  { font-family : var(--font-mono); }
 
 .text-left   { text-align : left; }
 .text-centre,
 .text-center { text-align : center; }
 .text-right  { text-align : right; }
 
-/*  Colour of highlight and text colour
-- for Firefox browsers  */
+/*  Colour of highlight and text colour  */
+/*  For Firefox browsers  */
 ::-moz-selection {
-    background : ${(props: GlobalStyledProps) => props.theme.text.selection.bg};
-    color      : ${(props: GlobalStyledProps) => props.theme.text.selection.text};
+    background : var(--selection-bg);
+    color      : var(--selection-text);
 }
-//  Same thing - for Webkit browsers
-                 ::selection {
-                     background : ${(props: GlobalStyledProps) => props.theme.text.selection.bg};
-                     color      : ${(props: GlobalStyledProps) => props.theme.text.selection.text};
-                 }
+/*  For Webkit browsers  */
+::selection {
+    background : var(--selection-bg);
+    color      : var(--selection-text);
+}
