@@ -1,0 +1,22 @@
+{
+  "name": "fictoan-css",
+  "version": "0.3.0",
+  "description": "The plain CSS version of Fictoan",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fictoan/fictoan-css.git"
+  },
+  "keywords": [
+    "css"
+  ],
+  "author": "Sujan Sundareswaran",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fictoan/fictoan-css/issues"
+  },
+  "homepage": "https://github.com/fictoan/fictoan-css#readme"
+}
