@@ -1,0 +1,74 @@
+.form-item {
+    display        : flex;
+    position       : relative;
+    width          : 100%;
+    flex-direction : column;
+    align-items    : flex-start;
+}
+
+input {
+    position         : relative;
+    width            : 100%;
+    flex             : 1 1 auto;
+    font-family      : var(--input-font-family);
+    color            : var(--input-text-colour-default);
+    background-color : var(--input-bg-colour-default);
+    border           : 1px solid var(--input-border-colour-default);
+    border-radius    : var(--input-border-radius);
+    padding          : 12px;
+    line-height      : 1;
+}
+
+input:active,
+input:focus {
+     background-color : var(--input-bg-colour-focus);
+     border           : 2px solid var(--input-border-colour-focus);
+     padding          : 11px;
+ }
+
+input[type=password] { letter-spacing : 4px; }
+
+input.validate-this,
+input[data-validate-this] {
+     padding-right       : 40px;
+     background-image    : url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+ICA8cG9seWxpbmUgcG9pbnRzPSIzLjUgMTIuNSA4LjUgMTcuNSAyMC41IDUuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZTJlMmUyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS13aWR0aD0iMiIvPjwvc3ZnPg==);
+     background-repeat   : no-repeat;
+     background-position : right 12px top 56%;
+     background-size     : 24px;
+}
+
+input.validate-this:focus,
+input[data-validate-this]:focus { background-position : right 11px top 56%; }
+
+/*  Green check mark  */
+input.validate-this:valid:not(:placeholder-shown),
+input[data-validate-this]:valid:not(:placeholder-shown) { background-image : url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+ICA8cG9seWxpbmUgcG9pbnRzPSIzLjUgMTIuNSA4LjUgMTcuNSAyMC41IDUuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMGVjMDVjIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS13aWR0aD0iMiIvPjwvc3ZnPg==); }
+
+.form-item > label {
+    position      : relative;
+    display       : flex;
+    flex          : 1 0 auto;
+    align-self    : flex-start;
+    font-size     : var(--input-label-text-size);
+    color         : var(--input-label-text-colour-default);
+    font-family   : var(--input-font-family);
+    order         : -1;
+    flex-wrap     : wrap;
+    margin-bottom : 4px;
+}
+
+.form-item input:required ~ label::before {
+     position  : absolute;
+     top       : -2px;
+     bottom    : 0;
+     left      : -8px;
+     margin    : auto;
+     content   : " *";
+     font-size : 120%;
+     color     : var(--input-label-required-colour-default);
+ }
+
+.form-item input:required ~ label::before { left : -10px; }
+
+.form-item input:focus ~ label { font-weight : bold; }
+

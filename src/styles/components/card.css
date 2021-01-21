@@ -1,0 +1,19 @@
+.card {
+    position         : relative;
+    width            : 100%;
+    height           : auto;
+    border-width     : var(--card-border-width);
+}
+
+.card.shape-rounded,
+.card[data-shape="rounded"] { border-radius : var(--card-border-radius); }
+
+.card.padding-all-tiny   { padding : 8px; }
+.card.padding-all-small  { padding : 16px; }
+.card.padding-all-medium { padding : 32px; }
+.card.padding-all-large  { padding : 48px; }
+.card.padding-all-huge   { padding : 64px; }
+
+@media all and (max-width : 600px) {
+    .card[class*="padding"] { padding : 4vmin; }
+}

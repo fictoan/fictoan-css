@@ -20,12 +20,14 @@
 .portion[data-desktop-span="5"] { grid-column : span 5; }
 
 .portion.one-fourth,
-.portion[data-desktop-span="6"] { grid-column : span 6; }
+.portion[data-desktop-span="6"],
+.portion[data-desktop-span="one-fourth"] { grid-column : span 6; }
 
 .portion[data-desktop-span="7"] { grid-column : span 7; }
 
 .portion.one-third,
-.portion[data-desktop-span="8"] { grid-column : span 8; }
+.portion[data-desktop-span="8"],
+.portion[data-desktop-span="one-third"] { grid-column : span 8; }
 
 .portion[data-desktop-span="9"] { grid-column : span 9; }
 
@@ -35,7 +37,8 @@
 .portion[data-desktop-span="11"] { grid-column : span 11; }
 
 .portion.half,
-.portion[data-desktop-span="12"] { grid-column : span 12; }
+.portion[data-desktop-span="12"],
+.portion[data-desktop-span="half"] { grid-column : span 12; }
 
 .portion[data-desktop-span="13"] { grid-column : span 13; }
 
@@ -66,7 +69,8 @@
 .portion[data-desktop-span="23"] { grid-column : span 23; }
 
 .portion.whole,
-.portion[data-desktop-span="24"] { grid-column : span 24; }
+.portion[data-desktop-span="24"],
+.portion[data-desktop-span="whole"] { grid-column : span 24; }
 
 
 @media all and (max-width : 600px) {
@@ -89,7 +93,8 @@
     .portion[data-mobile-span="7"] { grid-column : span 7; }
 
     .portion.one-third-on-mobile,
-    .portion[data-mobile-span="8"] { grid-column : span 8; }
+    .portion[data-mobile-span="8"],
+    .portion[data-mobile-span="one-third"] { grid-column : span 8; }
 
     .portion[data-mobile-span="9"] { grid-column : span 9; }
 
@@ -99,7 +104,8 @@
     .portion[data-mobile-span="11"] { grid-column : span 11; }
 
     .portion.half-on-mobile,
-    .portion[data-mobile-span="12"] { grid-column : span 12; }
+    .portion[data-mobile-span="12"],
+    .portion[data-mobile-span="half"] { grid-column : span 12; }
 
     .portion[data-mobile-span="13"] { grid-column : span 13; }
 
@@ -130,7 +136,8 @@
     .portion[data-mobile-span="23"] { grid-column : span 23; }
 
     .portion.whole-on-mobile,
-    .portion[data-mobile-span="24"] { grid-column : span 24; }
+    .portion[data-mobile-span="24"],
+    .portion[data-mobile-span="whole"] { grid-column : span 24; }
 }
 
 

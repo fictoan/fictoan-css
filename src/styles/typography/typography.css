@@ -4,9 +4,10 @@ body {
     font-family      : var(--paras-font-family);
     word-wrap        : normal;
     text-rendering   : optimizeLegibility;
-    background-color : var(--body-bg-colour);
 }
 
+
+/*  HEADINGS  /////////////////////////////////////////  */
 h1, h2, h3, h4, h5, h6 {
     font-family : var(--headings-font-family);
     font-weight : var(--headings-font-weight);
@@ -34,11 +35,42 @@ h6 { font-size : calc(var(--headings-size-multiplier) * 1.2em); }
     h1, h2, h3, h4, h5, h6 { word-wrap : break-word; }
 }
 
+
+/*  BODY TEXT  ////////////////////////////////////////  */
 p {
     font-family : var(--paras-font-family);
     color       : var(--paras-text-colour);
 }
 
+
+/*  SIZING  ///////////////////////////////////////////  */
+.text-nano,
+p[data-size="nano"] { font-size : 48%; }
+
+.text-micro,
+p[data-size="micro"] { font-size : 64%; }
+
+.text-tiny,
+p[data-size="tiny"] { font-size : 72%; }
+
+small,
+.text-small,
+p[data-size="small"] { font-size : 90%; }
+
+.text-medium,
+p[data-size="medium"] { font-size : 100%; }
+
+.text-large,
+p[data-size="large"] { font-size : 120%; }
+
+.text-huge,
+p[data-size="huge"] { font-size : 160%; }
+
+.text-left,
+*[data-text-align="left"] { text-align : left; }
+
+
+/*  LINKS  ////////////////////////////////////////////  */
 a {
     cursor      : pointer;
     font-family : var(--links-font-family);
@@ -52,10 +84,38 @@ a:not(.ff-button):hover { color : var(--links-hover-colour); }
 
 a:active { opacity: 0.72; }
 
+
+/*  ALIGNMENT  ////////////////////////////////////////  */
+.text-centre,
+.text-center,
+*[data-text-align="centre"],
+*[data-text-align="center"] { text-align : center; }
+
+.text-right,
+*[data-text-align="right"] { text-align : right; }
+
+
+/*  SELECTION  ////////////////////////////////////////  */
+/*  Colour of highlight and text.css colour  */
+/*  For Firefox browsers  */
+::-moz-selection {
+    background : var(--selection-bg);
+    color      : var(--selection-text);
+}
+/*  For Webkit browsers  */
+::selection {
+    background : var(--selection-bg);
+    color      : var(--selection-text);
+}
+
+
+/*  HELPERS  //////////////////////////////////////////  */
 .font-sans  { font-family : var(--font-sans); }
 .font-serif { font-family : var(--font-serif); }
 .font-mono  { font-family : var(--font-mono); }
 
+
+/*  WEIGHTS  //////////////////////////////////////////  */
 .weight-100,
 *[data-font-weight="100"] { font-weight : 100; }
 
@@ -82,29 +142,3 @@ a:active { opacity: 0.72; }
 
 .weight-900,
 *[data-font-weight="900"] { font-weight : 900; }
-
-.text-nano   { font-size :  48%; }
-.text-micro  { font-size :  64%; }
-.text-tiny   { font-size :  72%; }
-small,
-.text-small  { font-size :  90%; }
-.text-medium { font-size : 100%; }
-.text-large  { font-size : 120%; }
-.text-huge   { font-size : 160%; }
-
-.text-left   { text-align : left; }
-.text-centre,
-.text-center { text-align : center; }
-.text-right  { text-align : right; }
-
-/*  Colour of highlight and text colour  */
-/*  For Firefox browsers  */
-::-moz-selection {
-    background : var(--selection-bg);
-    color      : var(--selection-text);
-}
-/*  For Webkit browsers  */
-::selection {
-    background : var(--selection-bg);
-    color      : var(--selection-text);
-}

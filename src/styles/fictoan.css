@@ -1,8 +1,34 @@
-@import "components/layout/row.css";
-@import "components/layout/portion.css";
-@import "components/layout/spacing.css";
+@import "utilities/opinionated-normalise.css";
+@import "utilities/helpers.css";
+@import "helpers/background.css";
+@import "helpers/text.css";
+@import "helpers/border.css";
+@import "helpers/fill.css";
+@import "helpers/stroke.css";
 
-@import "components/typography/typography.css";
+
+/*  LAYOUT  ///////////////////////////////////////////  */
+@import "layout/row.css";
+@import "layout/portion.css";
+@import "layout/spacing.css";
+
+/*  UTILITIES  ////////////////////////////////////////  */
+@import "utilities/responsiveness.css";
+
+/*  TYPOGRAPHY  ///////////////////////////////////////  */
+@import "typography/typography.css";
+
+/*  COLOURS  //////////////////////////////////////////  */
 @import "components/colours.css";
 
+/*  THEMES  ///////////////////////////////////////////  */
 @import "theme/theme-light.css";
+
+/*  COMPONENTS  ///////////////////////////////////////  */
+@import "form/input-field.css";
+@import "form/button.css";
+
+/*  COMPONENTS  ///////////////////////////////////////  */
+@import "components/card.css";
+@import "components/hrule.css";
+

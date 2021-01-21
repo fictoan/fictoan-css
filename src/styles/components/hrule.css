@@ -1,0 +1,104 @@
+hr {
+    display : flex;
+    border  : 0;
+    margin  : 4vmax auto;
+    width   : 100%;
+}
+
+hr.side-margin-nano,
+hr[data-side-margin="nano"] { width: calc(100% -  2vw); }
+
+hr.side-margin-micro,
+hr[data-side-margin="micro"] { width: calc(100% -  4vw); }
+
+hr.side-margin-tiny,
+hr[data-side-margin="tiny"] { width: calc(100% -  8vw); }
+
+hr.side-margin-small,
+hr[data-side-margin="small"] { width: calc(100% - 16vw); }
+
+hr.side-margin-medium,
+hr[data-side-margin="medium"] { width: calc(100% - 24vw); }
+
+hr.side-margin-large,
+hr[data-side-margin="large"] { width: calc(100% - 36vw); }
+
+hr.side-margin-huge,
+hr[data-side-margin="huge"] { width: calc(100% - 48vw); }
+
+
+@media all and (min-width : 2400px) {
+    hr.side-margin-tiny,
+    hr[data-side-margin="tiny"] { width: calc(100% -  16vw); }
+
+    hr.side-margin-small,
+    hr[data-side-margin="small"] { width: calc(100% -  24vw); }
+
+    hr.side-margin-medium,
+    hr[data-side-margin="medium"] { width: calc(100% - 32vw); }
+
+    hr.side-margin-large,
+    hr[data-side-margin="large"] { width: calc(100% - 48vw); }
+
+    hr.side-margin-huge,
+    hr[data-side-margin="huge"] { width: calc(100% - 64vw); }
+}
+
+@media all and (max-width : 1600px) {
+    hr.side-margin-tiny,
+    hr[data-side-margin="tiny"] { width: calc(100% -  4vw); }
+
+    hr.side-margin-small,
+    hr[data-side-margin="small"] { width: calc(100% -  8vw); }
+
+    hr.side-margin-medium,
+    hr[data-side-margin="medium"] { width: calc(100% - 16vw); }
+
+    hr.side-margin-large,
+    hr[data-side-margin="large"] { width: calc(100% - 24vw); }
+
+    hr.side-margin-huge,
+    hr[data-side-margin="huge"] { width: calc(100% - 32vw); }
+}
+
+@media all and (max-width : 1200px) {
+    hr.side-margin-tiny,
+    hr[data-side-margin="tiny"] { width: calc(100% -  4vw); }
+
+    hr.side-margin-small,
+    hr[data-side-margin="small"] { width: calc(100% -  8vw); }
+
+    hr.side-margin-medium,
+    hr[data-side-margin="medium"] { width: calc(100% - 12vw); }
+
+    hr.side-margin-large,
+    hr[data-side-margin="large"] { width: calc(100% - 16vw); }
+
+    hr.side-margin-huge,
+    hr[data-side-margin="huge"] { width: calc(100% - 20vw); }
+}
+
+@media all and (max-width : 600px) {
+    hr[data-side-margin],
+    hr[class*="side-margin-"] {
+        width: calc(100% - 12vw);
+    }
+}
+
+hr.primary,
+hr[data-kind="primary"] {
+     background-color : var(--hrule-primary-bg-colour);
+     height           : var(--hrule-primary-height);
+}
+
+hr.secondary,
+hr[data-kind="secondary"] {
+     background-color : var(--hrule-secondary-bg-colour);
+     height           : var(--hrule-secondary-height);
+}
+
+hr.tertiary,
+hr[data-kind="tertiary"] {
+     background-color : var(--hrule-tertiary-bg-colour);
+     height           : var(--hrule-tertiary-height);
+}

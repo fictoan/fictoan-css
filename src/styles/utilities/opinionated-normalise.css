@@ -218,3 +218,8 @@ summary { display : list-item; }
 
 template,
 [hidden] { display : none; }
+
+.ff-pill,
+.ff-button { user-select : none; }
+
+.ff-button:not([class*="border"]) { border : none; }

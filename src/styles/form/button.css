@@ -1,0 +1,163 @@
+button {
+    position            : relative;
+    display             : inline-flex;
+    cursor              : pointer;
+    padding             : 12px 24px;
+    font-family         : var(--button-font-family);
+    font-weight         : bold;
+    font-size           : 92%;
+    text-align          : center;
+    justify-content     : center;
+    align-self          : flex-start;
+    text-decoration     : none;
+    line-height         : 1;
+    transition          : all 0.2s;
+    background-position : center;
+    user-select         : none;
+}
+
+button:active {
+    box-shadow : none;
+    opacity    : 0.72;
+}
+
+/*  PRIMARY BUTTON  ///////////////////////////////////  */
+button.primary,
+button[data-kind="primary"] {
+    background-color : var(--button-primary-bg-colour-default);
+    color            : var(--button-primary-text-colour-default);
+    border           : 1px solid var(--button-primary-border-colour-default);
+    border-radius    : var(--button-border-radius);
+}
+
+button.primary:hover,
+button[data-kind="primary"]:hover {
+    background-color : var(--button-primary-bg-colour-hover);
+    color            : var(--button-primary-text-colour-hover);
+    border           : 1px solid var(--button-primary-border-colour-hover);
+}
+
+button.primary:active,
+button[data-kind="primary"]:active {
+    background-color : var(--button-primary-bg-colour-active);
+    color            : var(--button-primary-text-colour-active);
+    border           : 1px solid var(--button-primary-border-colour-active);
+}
+
+button.primary.is-loading::after,
+button[data-kind="primary"].is-loading::after {
+     border             : 3px solid var(--button-primary-spinner-colour);
+     border-top-color   : transparent;
+     border-right-color : transparent;
+}
+
+/*  SECONDARY BUTTON  /////////////////////////////////  */
+button.secondary,
+button[data-kind="secondary"] {
+    background-color : var(--button-secondary-bg-colour-default);
+    color            : var(--button-secondary-text-colour-default);
+    border           : 1px solid var(--button-secondary-border-colour-default);
+    border-radius    : var(--button-border-radius);
+}
+
+button.secondary:hover,
+button[data-kind="secondary"]:hover {
+    background-color : var(--button-secondary-bg-colour-hover);
+    color            : var(--button-secondary-text-colour-hover);
+    border           : 1px solid var(--button-secondary-border-colour-hover);
+}
+
+button.secondary:active,
+button[data-kind="secondary"]:active {
+    background-color : var(--button-secondary-bg-colour-active);
+    color            : var(--button-secondary-text-colour-active);
+    border           : 1px solid var(--button-secondary-border-colour-active);
+}
+
+button.secondary.is-loading::after,
+button[data-kind="secondary"].is-loading::after {
+    border             : 3px solid var(--button-secondary-spinner-colour);
+    border-top-color   : transparent;
+    border-right-color : transparent;
+}
+
+button.is-loading::after {
+    border : 3px solid var(--button-custom-spinner-colour);
+    border-top-color   : transparent;
+    border-right-color : transparent;
+}
+
+/*  Different sized buttons  */
+button.size-tiny,
+button[data-size="tiny"] {
+    padding   : 4px 8px;
+    font-size : 0.64em;
+}
+
+button.size-small,
+button[data-size="small"] {
+    padding   : 8px 16px;
+    font-size : 0.8em;
+}
+
+button.size-large,
+button[data-size="large"] {
+    padding   : 12px 24px;
+    font-size : 1.24em;
+}
+
+button.size-huge,
+button[data-size="huge"] {
+    padding   : 24px 40px;
+    font-size : 2.4em;
+}
+
+
+/*  BUTTON WITH SPINNER  //////////////////////////////  */
+button.is-loading {
+     color          : transparent !important;
+     box-shadow     : none;
+     user-select    : none;
+     pointer-events : none;
+ }
+
+button.is-loading::after {
+     display             : block;
+     position            : absolute;
+     margin              : auto;
+     left                : 0;
+     top                 : 0;
+     bottom              : 0;
+     right               : 0;
+     height              : 16px;
+     width               : 16px;
+     border-radius       : 50%;
+     content             : "";
+     -webkit-animation   : spinner 0.4s infinite linear;
+     animation           : spinner 0.4s infinite linear;
+ }
+
+button.size-tiny.is-loading::after,
+button.size-small.is-loading::after {
+     height : 8px;
+     width  : 8px;
+ }
+
+/*  Animation for loader  */
+@-webkit-keyframes spinner {
+    from {
+        -webkit-transform : rotate(0deg);
+    }
+    to {
+        -webkit-transform : rotate(359deg);
+    }
+}
+
+@keyframes spinner {
+    from {
+        transform : rotate(0deg);
+    }
+    to {
+        transform : rotate(359deg);
+    }
+}

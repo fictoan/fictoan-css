@@ -1,3 +1,8 @@
+@import "../components/colours.css";
+@import url("/../assets/fonts/IBMPlexSans-Regular.ttf");
+@import url("/../assets/fonts/IBMPlexSans-SemiBold.ttf");
+
+
 /*  COLOURS  //////////////////////////////////////////  */
 :root {
     --hue      : hsl(212, 100%, 54%);
@@ -24,10 +29,15 @@
     --huge   : 24vmax;
 }
 
+:root {
+    --global-curve-radius : 8px;
+    --global-border-width : 1px;
+}
+
 /*  TYPOGRAPHY  ///////////////////////////////////////  */
 /*  FONTS  ------------------------  */
 :root {
-    --font-sans  : "SF Pro", sans-serif;
+    --font-sans  : "IBM Plex Sans", sans-serif;
     --font-serif : "Times New Roman", serif;
     --font-mono  : "SF Mono", serif;
 }
@@ -36,7 +46,7 @@
 :root {
     --headings-font-family     : var(--font-sans);
     --headings-font-weight     : 600;
-    --headings-text-colour     : var(--hue);
+    --headings-text-colour     : var(--shade);
     --headings-line-height     : 1.4em;
     --headings-base-size       : 1;
     --headings-size-multiplier : 1.24;
@@ -56,8 +66,8 @@
     --links-font-family    : var(--font-sans);
     --links-font-weight    : 400;
 
-    --links-default-colour : var(--analogue);
-    --links-hover-colour   : var(--analogue);
+    --links-default-colour : var(--axis-primary);
+    --links-hover-colour   : var(--axis-primary);
 }
 
 /*  CODE  -------------------------  */
@@ -66,4 +76,80 @@
 
     --code-text-colour : var(--analogue);
     --code-bg-colour   : var(--analogue);
+}
+
+
+/*  CARD  /////////////////////////////////////////////  */
+:root {
+    --card-border-width  : 1px;
+    --card-border-colour : var(--slate10);
+    --card-border-radius : var(--global-curve-radius);
+    --card-bg-colour     : var(--white);
+}
+
+/*  INPUT  ////////////////////////////////////////////  */
+:root {
+    --input-font-family     : var(--font-sans);
+    --input-border-radius   : 4px;
+    --input-label-text-size : 14px;
+
+    --input-text-colour-default           : var(--shade);
+    --input-bg-colour-default             : var(--white);
+    --input-border-colour-default         : var(--slate40);
+    --input-label-text-colour-default     : var(--shade);
+    --input-label-required-colour-default : var(--red90);
+
+    --input-text-colour-focus   : var(--shade);
+    --input-bg-colour-focus     : var(--white);
+    --input-border-colour-focus : var(--axis-primary);
+}
+
+/*  BUTTON  ///////////////////////////////////////////  */
+:root {
+    --button-font-family   : var(--font-sans);
+    --button-border-radius : 4px;
+
+    /*  PRIMARY  ------------------  */
+    --button-primary-bg-colour-default     : var(--axis-primary);
+    --button-primary-border-colour-default : var(--axis-primary);
+    --button-primary-text-colour-default   : var(--white);
+
+    --button-primary-bg-colour-hover     : var(--axis-primary);
+    --button-primary-border-colour-hover : var(--axis-primary);
+    --button-primary-text-colour-hover   : var(--white);
+
+    --button-primary-bg-colour-active     : var(--axis-primary);
+    --button-primary-border-colour-active : var(--axis-primary);
+    --button-primary-text-colour-active   : var(--white);
+
+    --button-primary-spinner-colour : var(--white);
+
+    /*  SECONDARY  ----------------  */
+    --button-secondary-bg-colour-default     : var(--crimson20);
+    --button-secondary-border-colour-default : var(--crimson20);
+    --button-secondary-text-colour-default   : var(--axis-primary);
+
+    --button-secondary-bg-colour-hover     : var(--crimson20);
+    --button-secondary-border-colour-hover : var(--crimson20);
+    --button-secondary-text-colour-hover   : var(--axis-primary);
+
+    --button-secondary-bg-colour-active     : var(--crimson10);
+    --button-secondary-border-colour-active : var(--crimson10);
+    --button-secondary-text-colour-active   : var(--axis-primary);
+
+    --button-secondary-spinner-colour : var(--white);
+
+    --button-custom-spinner-colour : var(--white);
+}
+
+/*  HRULE  ////////////////////////////////////////////  */
+:root {
+    --hrule-primary-bg-colour : var(--slate80);
+    --hrule-primary-height    : 1px;
+
+    --hrule-secondary-bg-colour : var(--slate40);
+    --hrule-secondary-height    : 1px;
+
+    --hrule-tertiary-bg-colour : var(--slate20);
+    --hrule-tertiary-height    : 1px;
 }
