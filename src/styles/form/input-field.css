@@ -21,30 +21,14 @@ input {
 
 input:active,
 input:focus {
-     background-color : var(--input-bg-colour-focus);
-     border           : 2px solid var(--input-border-colour-focus);
-     padding          : 11px;
- }
+    background-color : var(--input-bg-colour-focus);
+    border           : 2px solid var(--input-border-colour-focus);
+    padding          : 11px;
+}
 
 input[type=password] { letter-spacing : 4px; }
 
-input.validate-this,
-input[data-validate-this] {
-     padding-right       : 40px;
-     background-image    : url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+ICA8cG9seWxpbmUgcG9pbnRzPSIzLjUgMTIuNSA4LjUgMTcuNSAyMC41IDUuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZTJlMmUyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS13aWR0aD0iMiIvPjwvc3ZnPg==);
-     background-repeat   : no-repeat;
-     background-position : right 12px top 56%;
-     background-size     : 24px;
-}
-
-input.validate-this:focus,
-input[data-validate-this]:focus { background-position : right 11px top 56%; }
-
-/*  Green check mark  */
-input.validate-this:valid:not(:placeholder-shown),
-input[data-validate-this]:valid:not(:placeholder-shown) { background-image : url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+ICA8cG9seWxpbmUgcG9pbnRzPSIzLjUgMTIuNSA4LjUgMTcuNSAyMC41IDUuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMGVjMDVjIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS13aWR0aD0iMiIvPjwvc3ZnPg==); }
-
-.form-item > label {
+.form-item > input + label {
     position      : relative;
     display       : flex;
     flex          : 1 0 auto;
@@ -58,17 +42,99 @@ input[data-validate-this]:valid:not(:placeholder-shown) { background-image : url
 }
 
 .form-item input:required ~ label::before {
-     position  : absolute;
-     top       : -2px;
-     bottom    : 0;
-     left      : -8px;
-     margin    : auto;
-     content   : " *";
-     font-size : 120%;
-     color     : var(--input-label-required-colour-default);
- }
+    position  : absolute;
+    top       : -2px;
+    bottom    : 0;
+    left      : -8px;
+    margin    : auto;
+    content   : " *";
+    font-size : 120%;
+    color     : var(--input-label-required-colour-default);
+}
 
 .form-item input:required ~ label::before { left : -10px; }
 
 .form-item input:focus ~ label { font-weight : bold; }
 
+.form-item label > span {
+    display     : none;
+    font-weight : normal;
+    color       : var(--input-label-help-text-colour);
+    align-self  : center;
+    transition  : opacity 0.2s;
+}
+
+.form-item label > span::before { content : "\0000a0\2022\0000a0"; }
+
+.form-item input:focus ~ label > span,
+.form-item input:active ~ label > span {
+    display : inline-flex;
+}
+
+input.validate-this,
+input[data-validate-this] {
+    padding-right       : 40px;
+    background-image    : url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+ICA8cG9seWxpbmUgcG9pbnRzPSIzLjUgMTIuNSA4LjUgMTcuNSAyMC41IDUuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZTJlMmUyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS13aWR0aD0iMiIvPjwvc3ZnPg==);
+    background-repeat   : no-repeat;
+    background-position : right 12px top 56%;
+    background-size     : 24px;
+}
+
+input.validate-this:focus,
+input[data-validate-this]:focus { background-position : right 11px top 56%; }
+
+/*  Green check mark  */
+input.validate-this:valid:not(:placeholder-shown),
+input[data-validate-this]:valid:not(:placeholder-shown) { background-image : url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+ICA8cG9seWxpbmUgcG9pbnRzPSIzLjUgMTIuNSA4LjUgMTcuNSAyMC41IDUuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMGVjMDVjIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS13aWR0aD0iMiIvPjwvc3ZnPg==); }
+
+p.input-error {
+    display   : none;
+    font-size : 92%;
+    margin    : 8px 0 0 0;
+}
+
+.form-item input:invalid:focus:not(:placeholder-shown) ~ label + p.input-error,
+.form-item input:invalid:not(:focus):not(:placeholder-shown) ~ label + p.input-error {
+    display : block;
+    color   : var(--input-error-text-colour);
+}
+
+/*  Red check mark  */
+.form-item > input:invalid:not(:focus):not(:placeholder-shown) {
+    border              : 1px solid var(--input-border-colour-invalid);
+    background-color    : var(--input-bg-colour-invalid);
+    background-image    : url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+ICA8bGluZSB4MT0iNi41IiB5MT0iMTcuNSIgeDI9IjE4LjUiIHkyPSI1LjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2VmNDM0MyIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2Utd2lkdGg9IjIiLz4gIDxsaW5lIHgxPSI2LjUiIHkxPSI1LjUiIHgyPSIxOC41IiB5Mj0iMTcuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZWY0MzQzIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS13aWR0aD0iMiIvPjwvc3ZnPg==);
+    background-repeat   : no-repeat;
+    background-position : 98%;
+    background-size     : 24px;
+}
+
+/*  TEXTAREA  /////////////////////////////////////////  */
+textarea {
+    position         : relative;
+    width            : 100%;
+    flex             : 1 1 auto;
+    font-family      : var(--input-font-family);
+    background-color : var(--input-bg-colour-default);
+    border           : 1px solid var(--input-border-colour-default);
+    border-radius    : 4px;
+    padding          : 12px;
+    line-height      : 1;
+    max-width        : 100%;
+    min-width        : 100%;
+    resize           : vertical;
+}
+
+textarea:active,
+textarea:focus {
+    background-color : var(--input-bg-colour-focus);
+    border           : 2px solid var(--input-border-colour-focus);
+    padding          : 11px;
+}
+
+textarea:read-only {
+    background-color : var(--textarea-bg-colour);
+    color            : var(--textarea-text-colour);
+}
+
+textarea:read-only:focus { border : 2px solid var(--textarea-border-colour); }

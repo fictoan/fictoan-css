@@ -1,0 +1,88 @@
+form {
+    display        : flex;
+    position       : relative;
+    width          : 100%;
+    flex-direction : column;
+}
+
+form.spacing-none .form-item:not(:last-child),
+form[data-spacing="none"] .form-item:not(:last-child) {
+    margin-bottom : 0;
+}
+
+form.spacing-nano .form-item:not(:last-child),
+form[data-spacing="nano"] .form-item:not(:last-child) {
+    margin-bottom : 8px;
+}
+
+form.spacing-micro .form-item:not(:last-child),
+form[data-spacing="micro"] .form-item:not(:last-child) {
+    margin-bottom : 12px;
+}
+
+form.spacing-tiny .form-item:not(:last-child),
+form[data-spacing="tiny"] .form-item:not(:last-child) {
+    margin-bottom : 16px;
+}
+
+form.spacing-small .form-item:not(:last-child),
+form[data-spacing="small"] .form-item:not(:last-child) {
+    margin-bottom : 24px;
+}
+
+form.spacing-medium .form-item:not(:last-child),
+form[data-spacing="medium"] .form-item:not(:last-child) {
+    margin-bottom : 32px;
+}
+
+form.spacing-large .form-item:not(:last-child),
+form[data-spacing="large"] .form-item:not(:last-child) {
+    margin-bottom : 40px;
+}
+
+form.spacing-huge .form-item:not(:last-child),
+form[data-spacing="huge"] .form-item:not(:last-child) {
+    margin-bottom : 48px;
+}
+
+
+
+form.spacing-none   ${FormItemGroupStyled} .form-item:last-child,
+form[data-spacing="none"]   ${FormItemGroupStyled} .form-item:last-child {
+    margin-bottom : 0;
+}
+
+form.spacing-nano   ${FormItemGroupStyled} .form-item:last-child,
+form[data-spacing="nano"]   ${FormItemGroupStyled} .form-item:last-child {
+    margin-bottom : 8px;
+}
+
+form.spacing-micro  ${FormItemGroupStyled} .form-item:last-child,
+form[data-spacing="micro"]  ${FormItemGroupStyled} .form-item:last-child {
+    margin-bottom : 12px;
+}
+
+form.spacing-tiny   ${FormItemGroupStyled} .form-item:last-child,
+form[data-spacing="tiny"]   ${FormItemGroupStyled} .form-item:last-child {
+    margin-bottom : 16px;
+}
+
+form.spacing-small  ${FormItemGroupStyled} .form-item:last-child,
+form[data-spacing="small"]  ${FormItemGroupStyled} .form-item:last-child {
+    margin-bottom : 24px;
+}
+
+form.spacing-medium ${FormItemGroupStyled} .form-item:last-child,
+form[data-spacing="medium"] ${FormItemGroupStyled} .form-item:last-child {
+    margin-bottom : 32px;
+}
+
+form.spacing-large  ${FormItemGroupStyled} .form-item:last-child,
+form[data-spacing="large"]  ${FormItemGroupStyled} .form-item:last-child {
+    margin-bottom : 40px;
+}
+
+form.spacing-huge   ${FormItemGroupStyled} .form-item:last-child,
+form[data-spacing="huge"]   ${FormItemGroupStyled} .form-item:last-child {
+    margin-bottom : 48px;
+}

@@ -25,8 +25,10 @@
 @import "theme/theme-light.css";
 
 /*  COMPONENTS  ///////////////////////////////////////  */
-@import "form/input-field.css";
+@import "form/form.css";
 @import "form/button.css";
+@import "form/input-field.css";
+@import "form/radio-button.css";
 
 /*  COMPONENTS  ///////////////////////////////////////  */
 @import "components/card.css";

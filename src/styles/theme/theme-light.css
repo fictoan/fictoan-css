@@ -1,6 +1,6 @@
 @import "../components/colours.css";
-@import url("/../assets/fonts/IBMPlexSans-Regular.ttf");
-@import url("/../assets/fonts/IBMPlexSans-SemiBold.ttf");
+@import url("../assets/fonts/IBMPlexSans-Regular.ttf");
+@import url("../assets/fonts/IBMPlexSans-SemiBold.ttf");
 
 
 /*  COLOURS  //////////////////////////////////////////  */
@@ -66,8 +66,8 @@
     --links-font-family    : var(--font-sans);
     --links-font-weight    : 400;
 
-    --links-default-colour : var(--axis-primary);
-    --links-hover-colour   : var(--axis-primary);
+    --links-default-colour : var(--hue);
+    --links-hover-colour   : var(--hue);
 }
 
 /*  CODE  -------------------------  */
@@ -89,9 +89,11 @@
 
 /*  INPUT  ////////////////////////////////////////////  */
 :root {
-    --input-font-family     : var(--font-sans);
-    --input-border-radius   : 4px;
-    --input-label-text-size : 14px;
+    --input-font-family            : var(--font-sans);
+    --input-border-radius          : 4px;
+    --input-label-text-size        : 14px;
+    --input-label-help-text-colour : var(--slate80);
+    --input-error-text-colour         : var(--red90);
 
     --input-text-colour-default           : var(--shade);
     --input-bg-colour-default             : var(--white);
@@ -99,9 +101,21 @@
     --input-label-text-colour-default     : var(--shade);
     --input-label-required-colour-default : var(--red90);
 
+
     --input-text-colour-focus   : var(--shade);
     --input-bg-colour-focus     : var(--white);
-    --input-border-colour-focus : var(--axis-primary);
+    --input-border-colour-focus : var(--hue);
+
+    --input-bg-colour-invalid         : var(--red10);
+    --input-border-colour-invalid     : var(--red40);
+    --input-label-text-colour-invalid : var(--shade);
+}
+
+/*  TEXTAREA  /////////////////////////////////////////  */
+:root {
+    --textarea-bg-colour     : var(--slate20);
+    --textarea-text-colour   : var(--slate20);
+    --textarea-border-colour : var(--slate20);
 }
 
 /*  BUTTON  ///////////////////////////////////////////  */
@@ -110,16 +124,16 @@
     --button-border-radius : 4px;
 
     /*  PRIMARY  ------------------  */
-    --button-primary-bg-colour-default     : var(--axis-primary);
-    --button-primary-border-colour-default : var(--axis-primary);
+    --button-primary-bg-colour-default     : var(--hue);
+    --button-primary-border-colour-default : var(--hue);
     --button-primary-text-colour-default   : var(--white);
 
-    --button-primary-bg-colour-hover     : var(--axis-primary);
-    --button-primary-border-colour-hover : var(--axis-primary);
+    --button-primary-bg-colour-hover     : var(--hue);
+    --button-primary-border-colour-hover : var(--hue);
     --button-primary-text-colour-hover   : var(--white);
 
-    --button-primary-bg-colour-active     : var(--axis-primary);
-    --button-primary-border-colour-active : var(--axis-primary);
+    --button-primary-bg-colour-active     : var(--hue);
+    --button-primary-border-colour-active : var(--hue);
     --button-primary-text-colour-active   : var(--white);
 
     --button-primary-spinner-colour : var(--white);
@@ -127,15 +141,15 @@
     /*  SECONDARY  ----------------  */
     --button-secondary-bg-colour-default     : var(--crimson20);
     --button-secondary-border-colour-default : var(--crimson20);
-    --button-secondary-text-colour-default   : var(--axis-primary);
+    --button-secondary-text-colour-default   : var(--hue);
 
     --button-secondary-bg-colour-hover     : var(--crimson20);
     --button-secondary-border-colour-hover : var(--crimson20);
-    --button-secondary-text-colour-hover   : var(--axis-primary);
+    --button-secondary-text-colour-hover   : var(--hue);
 
     --button-secondary-bg-colour-active     : var(--crimson10);
     --button-secondary-border-colour-active : var(--crimson10);
-    --button-secondary-text-colour-active   : var(--axis-primary);
+    --button-secondary-text-colour-active   : var(--hue);
 
     --button-secondary-spinner-colour : var(--white);
 
@@ -152,4 +166,18 @@
 
     --hrule-tertiary-bg-colour : var(--slate20);
     --hrule-tertiary-height    : 1px;
+}
+
+/*  RADIO BUTTON  /////////////////////////////////////  */
+:root {
+    --raadio-button-font-family : var(--font-sans);
+    --raadio-button-text-colour : var(--paras-text-colour);
+    --radio-button-bg-colour-default : var(--slate20);
+
+    --radio-button-bg-colour-hover : var(--slate40);
+
+    --radio-button-circle-colour-selected : var(--white);
+    --radio-button-bg-colour-selected : var(--hue);
+
+    --radio-button-bg-colour-disabled : var(--slate10);
 }

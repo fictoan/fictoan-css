@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <title>Fictoan</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="./styles/opinionated-normalise.css">
+    <link rel="stylesheet" href="./styles/utilities/opinionated-normalise.css">
     <link rel="stylesheet" href="./styles/fictoan.css">
 </head>
 
 <body>
-    <div class="row" data-margin-top="huge" data-padding-left="medium">
+    <div class="row" data-margin-top="micro" data-side-padding="large">
         <div
             class="portion"
             data-desktop-span="14"
@@ -24,6 +24,30 @@
             <h5>Fictoan CSS</h5>
             <h6>Fictoan CSS</h6>
             <p>Fictoan CSS</p>
+        </div>
+    </div>
+
+    <div class="row" data-side-padding="large">
+        <div class="portion" data-desktop-span="whole">
+            <form data-spacing="small">
+                <h4 data-margin-bottom="micro">Form</h4>
+
+                <div class="form-item">
+                    <input id="first-name" placeholder="First name" pattern="[a]" data-validate-this>
+                    <label for="first-name">First name<span>As per your records</span></label>
+                    <p class="input-error">Nope, doesn’t look like it</p>
+                </div>
+
+                <div class="form-item">
+                    <input id="last-name" placeholder="Last name">
+                    <label for="last-name">Last name</label>
+                </div>
+
+                <div class="form-item">
+                    <input id="phone-number" placeholder="Last name">
+                    <label for="phone-number">Last name</label>
+                </div>
+            </form>
         </div>
     </div>
 </body>

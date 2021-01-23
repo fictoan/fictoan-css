@@ -124,7 +124,6 @@ a { background-color : transparent; }
 abbr[title] {
     border-bottom   : none;
     text-decoration : underline;
-    text-decoration : underline dotted;
 }
 
 sub,
