@@ -34,8 +34,8 @@ input[type="radio"]:checked + label::after { opacity : 1; }
 input[type="radio"] + label {
     display        : inline-flex;
     position       : relative;
-    font-family    : var(--raadio-button-font-family);
-    color          : var(--raadio-button-text-colour);
+    font-family    : var(--radio-button-font-family);
+    color          : var(--radio-button-text-colour);
     cursor         : pointer;
     vertical-align : middle;
     line-height    : unset;
@@ -79,9 +79,14 @@ input[type="radio"]:disabled:checked + label {
 .radio-items-wrapper {
     display        : flex;
     flex-direction : column;
+    width          : 100%;
 }
 
-.radio-items-wrapper[data-align="horizontal"] { flex-direction : row; }
+.radio-items-wrapper[data-align="horizontal"] {
+    flex-direction : row;
+    flex-wrap      : wrap;
+}
+
 
 .radio-items-wrapper[data-align="horizontal"] .radio-item {
     flex-direction  : row;
@@ -97,7 +102,7 @@ input[type="radio"]:disabled:checked + label {
 .radio-group .radio-item { margin-bottom : 16px; }
 
 @media screen and (max-width : 520px) {
-    .radio-group[data-align="horizontal"] .radio-item {}
+    .radio-items-wrapper[data-align="horizontal"] .radio-item { min-width : 50%; }
 }
 
 .radio-item label { font-size : var(--input-label-text-size); }

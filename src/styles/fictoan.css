@@ -30,6 +30,7 @@
 @import "form/button.css";
 @import "form/input-field.css";
 @import "form/radio-button.css";
+@import "form/checkbox.css";
 
 /*  COMPONENTS  ///////////////////////////////////////  */
 @import "components/card.css";
