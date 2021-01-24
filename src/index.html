@@ -30,22 +30,24 @@
     <div class="row" data-side-padding="large">
         <div class="portion" data-desktop-span="whole">
             <form data-spacing="small">
-                <h4 data-margin-bottom="micro">Form</h4>
+                <p data-font-weight="600" data-margin-bottom="micro">Form</p>
 
-                <div class="form-item">
-                    <input id="first-name" placeholder="First name" pattern="[a]" data-validate-this>
-                    <label for="first-name">First name<span>As per your records</span></label>
-                    <p class="input-error">Nope, doesn’t look like it</p>
+                <div class="form-item-group">
+                    <div class="form-item">
+                        <input id="first-name" placeholder="First name" data-validate-this pattern="[a]">
+                        <label for="first-name">First name<span>Enter just “a”</span></label>
+                        <p class="input-error">Nope, read the instruction, dummy</p>
+                    </div>
+
+                    <div class="form-item">
+                        <input id="last-name" placeholder="Last name">
+                        <label for="last-name">Last name</label>
+                    </div>
                 </div>
 
                 <div class="form-item">
-                    <input id="last-name" placeholder="Last name">
-                    <label for="last-name">Last name</label>
-                </div>
-
-                <div class="form-item">
-                    <input id="phone-number" placeholder="Last name">
-                    <label for="phone-number">Last name</label>
+                    <input id="phone-number" placeholder="Official mobile, please">
+                    <label for="phone-number">Phone number</label>
                 </div>
             </form>
         </div>

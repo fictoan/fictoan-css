@@ -1,6 +1,6 @@
 @import "../components/colours.css";
-@import url("../assets/fonts/IBMPlexSans-Regular.ttf");
-@import url("../assets/fonts/IBMPlexSans-SemiBold.ttf");
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
+
 
 
 /*  COLOURS  //////////////////////////////////////////  */
