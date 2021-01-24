@@ -1,71 +1,105 @@
-input[type="radio"] {
-    display      : inline-flex;
-    margin-right : 24px;
-    width        : auto;
-}
+.radio-item > input[type="radio"] + label { order : unset; }
 
 /*  The grey outer circle  */
 input[type="radio"] + label::before {
-      width         : 16px;
-      height        : 16px;
-      /* top           : 4px; */
-      left          : 0;
-      border-radius : 50%;
-      background    : var(--radio-button-bg-colour-default);
-  }
+    width         : 16px;
+    height        : 16px;
+    /* top           : 4px; */
+    left          : 0;
+    border-radius : 50%;
+    background    : var(--radio-button-bg-colour-default);
+}
 
-input[type="radio"]:hover label::before { background : var(--radio-button-bg-colour-hover); }
+input[type="radio"]:hover + label::before { background : var(--radio-button-bg-colour-hover); }
 
 /*  The white inner circle  */
 input[type="radio"] + label::after {
-      opacity       : 0;
-      left          : 4px;
-      top           : 4px;
-      width         : 8px;
-      height        : 8px;
-      background    : var(--radio-button-circle-colour-selected);
-      border-radius : 50%;
-  }
+    opacity       : 0;
+    left          : 4px;
+    top           : 4px;
+    width         : 8px;
+    height        : 8px;
+    background    : var(--radio-button-circle-colour-selected);
+    border-radius : 50%;
+}
 
 input[type="radio"]:checked + label::before {
-     background : var(--radio-button-bg-colour-selected);
+    background : var(--radio-button-bg-colour-selected);
 }
 
 input[type="radio"]:checked + label::after { opacity : 1; }
 
-input[type="radio"]:only-of-type { margin-right : 0; }
+/*input[type="radio"]:only-of-type { margin-right : 0; }*/
 
 input[type="radio"] + label {
-      display        : inline-block;
-      position       : relative;
-      font-family    : var(--raadio-button-font-family);
-      color          : var(--raadio-button-text-colour);
-      cursor         : pointer;
-      vertical-align : middle;
-      line-height    : 1.1;
-      padding-left   : 8px;
+    display        : inline-flex;
+    position       : relative;
+    font-family    : var(--raadio-button-font-family);
+    color          : var(--raadio-button-text-colour);
+    cursor         : pointer;
+    vertical-align : middle;
+    line-height    : unset;
+    padding-left   : 24px;
 }
 
-input[type="radio"]::before,
-input[type="radio"]::after {
-     display    : inline-block;
-     position   : absolute;
-     content    : "";
-     transition : all 0.1s ease-out;
+input[type="radio"] + label::before,
+input[type="radio"] + label::after {
+    display    : inline-block;
+    position   : absolute;
+    content    : "";
+    transition : all 0.1s ease-out;
 }
 
 /*  The grey square  */
 input[type="radio"]:disabled + label::before {
-     opacity        : 0.24;
-     user-select    : none;
-     pointer-events : none;
-     background     : var(--radio-button-bg-colour-disabled);
-     box-shadow     : inset 0 2px 8px -2px rgba(0, 0, 0, 0.24);
- }
+    opacity        : 0.24;
+    user-select    : none;
+    pointer-events : none;
+    background     : var(--radio-button-bg-colour-disabled);
+    box-shadow     : inset 0 2px 8px -2px rgba(0, 0, 0, 0.24);
+}
 
-input[type="radio"]:disabled         + label,
-input[type="radio"]:disabled:checked + label  {
+input[type="radio"]:disabled + label,
+input[type="radio"]:disabled:checked + label {
     pointer-events : none;
     cursor         : default;
     opacity        : 0.24;
 }
+
+.radio-group {
+    display        : flex;
+    flex-direction : column;
+}
+
+.radio-group .group-title {
+    font-weight : 600;
+    margin      : 0 0 16px 0;
+}
+
+.radio-items-wrapper {
+    display        : flex;
+    flex-direction : column;
+}
+
+.radio-items-wrapper[data-align="horizontal"] { flex-direction : row; }
+
+.radio-items-wrapper[data-align="horizontal"] .radio-item {
+    flex-direction  : row;
+    min-width       : 33%;
+    justify-content : space-between;
+}
+
+.radio-items-wrapper[data-align="horizontal"] .radio-item label {
+    word-break : break-word;
+    word-wrap  : break-word;
+}
+
+.radio-group .radio-item { margin-bottom : 16px; }
+
+@media screen and (max-width : 520px) {
+    .radio-group[data-align="horizontal"] .radio-item {}
+}
+
+.radio-item label { font-size : var(--input-label-text-size); }
+
+
