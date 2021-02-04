@@ -1,7 +1,7 @@
 body {
     font-size        : var(--paras-font-size);
     line-height      : var(--paras-line-height);
-    font-family      : var(--paras-font-family);
+    font-family      : var(--paras-font);
     word-wrap        : normal;
     text-rendering   : optimizeLegibility;
 }
@@ -9,7 +9,7 @@ body {
 
 /*  HEADINGS  /////////////////////////////////////////  */
 h1, h2, h3, h4, h5, h6 {
-    font-family : var(--headings-font-family);
+    font-family : var(--headings-font);
     font-weight : var(--headings-font-weight);
     color       : var(--headings-text-colour);
     line-height : var(--headings-line-height);
@@ -38,7 +38,7 @@ h6 { font-size : calc(var(--headings-size-multiplier) * 1.2em); }
 
 /*  BODY TEXT  ////////////////////////////////////////  */
 p {
-    font-family : var(--paras-font-family);
+    font-family : var(--paras-font);
     color       : var(--paras-text-colour);
 }
 
@@ -73,7 +73,7 @@ p[data-size="huge"] { font-size : 160%; }
 /*  LINKS  ////////////////////////////////////////////  */
 a {
     cursor      : pointer;
-    font-family : var(--links-font-family);
+    font-family : var(--links-font);
     color       : var(--links-default-colour);
     font-weight : bold;
     transition  : all 0.2s;

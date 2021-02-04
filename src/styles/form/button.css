@@ -3,7 +3,7 @@ button {
     display             : inline-flex;
     cursor              : pointer;
     padding             : 12px 24px;
-    font-family         : var(--button-font-family);
+    font-family         : var(--button-font);
     font-weight         : bold;
     font-size           : 92%;
     text-align          : center;
@@ -11,7 +11,7 @@ button {
     align-self          : flex-start;
     text-decoration     : none;
     line-height         : 1;
-    transition          : all 0.2s;
+    transition          : background-color 0.2s;
     background-position : center;
     user-select         : none;
 }
@@ -24,29 +24,29 @@ button:active {
 /*  PRIMARY BUTTON  ///////////////////////////////////  */
 button.primary,
 button[data-kind="primary"] {
-    background-color : var(--button-primary-bg-colour-default);
-    color            : var(--button-primary-text-colour-default);
-    border           : 1px solid var(--button-primary-border-colour-default);
+    background-color : var(--button-primary-bg-default);
+    color            : var(--button-primary-text-default);
+    border           : 1px solid var(--button-primary-border-default);
     border-radius    : var(--button-border-radius);
 }
 
 button.primary:hover,
 button[data-kind="primary"]:hover {
-    background-color : var(--button-primary-bg-colour-hover);
-    color            : var(--button-primary-text-colour-hover);
-    border           : 1px solid var(--button-primary-border-colour-hover);
+    background-color : var(--button-primary-bg-hover);
+    color            : var(--button-primary-text-hover);
+    border           : 1px solid var(--button-primary-border-hover);
 }
 
 button.primary:active,
 button[data-kind="primary"]:active {
-    background-color : var(--button-primary-bg-colour-active);
-    color            : var(--button-primary-text-colour-active);
-    border           : 1px solid var(--button-primary-border-colour-active);
+    background-color : var(--button-primary-bg-active);
+    color            : var(--button-primary-text-active);
+    border           : 1px solid var(--button-primary-border-active);
 }
 
 button.primary.is-loading::after,
 button[data-kind="primary"].is-loading::after {
-     border             : 3px solid var(--button-primary-spinner-colour);
+     border             : 3px solid var(--button-primary-spinner);
      border-top-color   : transparent;
      border-right-color : transparent;
 }
@@ -54,35 +54,35 @@ button[data-kind="primary"].is-loading::after {
 /*  SECONDARY BUTTON  /////////////////////////////////  */
 button.secondary,
 button[data-kind="secondary"] {
-    background-color : var(--button-secondary-bg-colour-default);
-    color            : var(--button-secondary-text-colour-default);
-    border           : 1px solid var(--button-secondary-border-colour-default);
+    background-color : var(--button-secondary-bg-default);
+    color            : var(--button-secondary-text-default);
+    border           : 1px solid var(--button-secondary-border-default);
     border-radius    : var(--button-border-radius);
 }
 
 button.secondary:hover,
 button[data-kind="secondary"]:hover {
-    background-color : var(--button-secondary-bg-colour-hover);
-    color            : var(--button-secondary-text-colour-hover);
-    border           : 1px solid var(--button-secondary-border-colour-hover);
+    background-color : var(--button-secondary-bg-hover);
+    color            : var(--button-secondary-text-hover);
+    border           : 1px solid var(--button-secondary-border-hover);
 }
 
 button.secondary:active,
 button[data-kind="secondary"]:active {
-    background-color : var(--button-secondary-bg-colour-active);
-    color            : var(--button-secondary-text-colour-active);
-    border           : 1px solid var(--button-secondary-border-colour-active);
+    background-color : var(--button-secondary-bg-active);
+    color            : var(--button-secondary-text-active);
+    border           : 1px solid var(--button-secondary-border-active);
 }
 
 button.secondary.is-loading::after,
 button[data-kind="secondary"].is-loading::after {
-    border             : 3px solid var(--button-secondary-spinner-colour);
+    border             : 3px solid var(--button-secondary-spinner);
     border-top-color   : transparent;
     border-right-color : transparent;
 }
 
 button.is-loading::after {
-    border : 3px solid var(--button-custom-spinner-colour);
+    border : 3px solid var(--button-custom-spinner);
     border-top-color   : transparent;
     border-right-color : transparent;
 }
@@ -138,7 +138,9 @@ button.is-loading::after {
  }
 
 button.size-tiny.is-loading::after,
-button.size-small.is-loading::after {
+button.size-small.is-loading::after,
+button[data-size="tiny"].is-loading::after,
+button[data-size="small"].is-loading::after {
      height : 8px;
      width  : 8px;
  }

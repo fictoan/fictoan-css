@@ -1,0 +1,76 @@
+.select-dropdown {
+    position    : relative;
+    width       : max-content;
+    align-self  : flex-start;
+}
+
+select {
+    display          : flex;
+    height           : 100%;
+    padding          : 12px 48px 12px 8px;
+    font-family      : var(--input-font);
+    background-color : var(--input-bg-default);
+    border-radius    : var(--input-border-radius);
+    align-items      : center;
+    border           : 1px solid var(--input-border-default);
+    width            : 100%;
+}
+
+.select-dropdown::after {
+     position       : absolute;
+     display        : block;
+     content        : "\2303";
+     top            : calc(50% - 4px);
+     right          : 12px;
+     font-size      : 24px;
+     color          : var(--select-chevron-border);
+     line-height    : 1.2;
+     border-color   : var(--select-chevron-border);
+     z-index        : 500;
+     pointer-events : none;
+     transform      : rotate(180deg);
+}
+
+/*  LABEL  --------------------------------------------  */
+.form-item > select + label {
+    position      : relative;
+    display       : flex;
+    flex          : 1 0 auto;
+    align-self    : flex-start;
+    font-size     : var(--input-label-text-size);
+    color         : var(--input-label-text-default);
+    font-family   : var(--input-font);
+    order         : -1;
+    flex-wrap     : wrap;
+    margin-bottom : 4px;
+}
+
+select:required ~ label::before {
+    position  : absolute;
+    top       : -2px;
+    bottom    : 0;
+    left      : -8px;
+    margin    : auto;
+    content   : " *";
+    font-size : 120%;
+    color     : var(--input-label-required-default);
+}
+
+select:required ~ label::before { left : -10px; }
+
+.form-item select:focus ~ label { font-weight : bold; }
+
+.form-item select > span {
+    display     : none;
+    font-weight : normal;
+    color       : var(--input-label-help-text);
+    align-self  : center;
+    transition  : opacity 0.2s;
+}
+
+.form-item select > span::before { content : "\0000a0\2022\0000a0"; }
+
+.form-item select:focus ~ label > span,
+.form-item select:active ~ label > span {
+    display : inline-flex;
+}

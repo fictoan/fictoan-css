@@ -2,10 +2,10 @@ input {
     position         : relative;
     width            : 100%;
     flex             : 1 1 auto;
-    font-family      : var(--input-font-family);
-    color            : var(--input-text-colour-default);
-    background-color : var(--input-bg-colour-default);
-    border           : 1px solid var(--input-border-colour-default);
+    font-family      : var(--input-font);
+    color            : var(--input-text-default);
+    background-color : var(--input-bg-default);
+    border           : 1px solid var(--input-border-default);
     border-radius    : var(--input-border-radius);
     padding          : 12px;
     line-height      : 1;
@@ -13,8 +13,8 @@ input {
 
 input:active,
 input:focus {
-    background-color : var(--input-bg-colour-focus);
-    border           : 2px solid var(--input-border-colour-focus);
+    background-color : var(--input-bg-focus);
+    border           : 2px solid var(--input-border-focus);
     padding          : 11px;
 }
 
@@ -27,8 +27,8 @@ input[type=password] { letter-spacing : 4px; }
     flex          : 1 0 auto;
     align-self    : flex-start;
     font-size     : var(--input-label-text-size);
-    color         : var(--input-label-text-colour-default);
-    font-family   : var(--input-font-family);
+    color         : var(--input-label-text-default);
+    font-family   : var(--input-font);
     order         : -1;
     flex-wrap     : wrap;
     margin-bottom : 4px;
@@ -42,7 +42,7 @@ input:required ~ label::before {
     margin    : auto;
     content   : " *";
     font-size : 120%;
-    color     : var(--input-label-required-colour-default);
+    color     : var(--input-label-required-default);
 }
 
 input:required ~ label::before { left : -10px; }
@@ -52,7 +52,7 @@ input:required ~ label::before { left : -10px; }
 .form-item label > span {
     display     : none;
     font-weight : normal;
-    color       : var(--input-label-help-text-colour);
+    color       : var(--input-label-help-text);
     align-self  : center;
     transition  : opacity 0.2s;
 }
@@ -90,13 +90,13 @@ p.input-error {
 .form-item input:invalid:focus:not(:placeholder-shown) ~ label + p.input-error,
 .form-item input:invalid:not(:focus):not(:placeholder-shown) ~ label + p.input-error {
     display : block;
-    color   : var(--input-error-text-colour);
+    color   : var(--input-error-text);
 }
 
 /*  Red check mark  */
 .form-item > input:invalid:not(:focus):not(:placeholder-shown) {
-    border              : 1px solid var(--input-border-colour-invalid);
-    background-color    : var(--input-bg-colour-invalid);
+    border              : 1px solid var(--input-border-invalid);
+    background-color    : var(--input-bg-invalid);
     background-image    : url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+ICA8bGluZSB4MT0iNi41IiB5MT0iMTcuNSIgeDI9IjE4LjUiIHkyPSI1LjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2VmNDM0MyIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2Utd2lkdGg9IjIiLz4gIDxsaW5lIHgxPSI2LjUiIHkxPSI1LjUiIHgyPSIxOC41IiB5Mj0iMTcuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZWY0MzQzIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS13aWR0aD0iMiIvPjwvc3ZnPg==);
     background-repeat   : no-repeat;
     background-position : 98%;
@@ -108,9 +108,9 @@ textarea {
     position         : relative;
     width            : 100%;
     flex             : 1 1 auto;
-    font-family      : var(--input-font-family);
-    background-color : var(--input-bg-colour-default);
-    border           : 1px solid var(--input-border-colour-default);
+    font-family      : var(--input-font);
+    background-color : var(--input-bg-default);
+    border           : 1px solid var(--input-border-default);
     border-radius    : 4px;
     padding          : 12px;
     line-height      : 1;
@@ -121,14 +121,14 @@ textarea {
 
 textarea:active,
 textarea:focus {
-    background-color : var(--input-bg-colour-focus);
-    border           : 2px solid var(--input-border-colour-focus);
+    background-color : var(--input-bg-focus);
+    border           : 2px solid var(--input-border-focus);
     padding          : 11px;
 }
 
 textarea:read-only {
-    background-color : var(--textarea-bg-colour);
-    color            : var(--textarea-text-colour);
+    background-color : var(--textarea-bg);
+    color            : var(--textarea-text);
 }
 
-textarea:read-only:focus { border : 2px solid var(--textarea-border-colour); }
+textarea:read-only:focus { border : 2px solid var(--textarea-border); }

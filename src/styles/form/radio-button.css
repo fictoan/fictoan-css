@@ -7,10 +7,10 @@ input[type="radio"] + label::before {
     /* top           : 4px; */
     left          : 0;
     border-radius : 50%;
-    background    : var(--radio-button-bg-colour-default);
+    background    : var(--radio-button-bg-default);
 }
 
-input[type="radio"]:hover + label::before { background : var(--radio-button-bg-colour-hover); }
+input[type="radio"]:hover + label::before { background : var(--radio-button-bg-hover); }
 
 /*  The white inner circle  */
 input[type="radio"] + label::after {
@@ -19,12 +19,12 @@ input[type="radio"] + label::after {
     top           : 4px;
     width         : 8px;
     height        : 8px;
-    background    : var(--radio-button-circle-colour-selected);
+    background    : var(--radio-button-circle-selected);
     border-radius : 50%;
 }
 
 input[type="radio"]:checked + label::before {
-    background : var(--radio-button-bg-colour-selected);
+    background : var(--radio-button-bg-selected);
 }
 
 input[type="radio"]:checked + label::after { opacity : 1; }
@@ -34,8 +34,8 @@ input[type="radio"]:checked + label::after { opacity : 1; }
 input[type="radio"] + label {
     display        : inline-flex;
     position       : relative;
-    font-family    : var(--radio-button-font-family);
-    color          : var(--radio-button-text-colour);
+    font-family    : var(--radio-button-font);
+    color          : var(--radio-button-text);
     cursor         : pointer;
     vertical-align : middle;
     line-height    : unset;
@@ -55,7 +55,7 @@ input[type="radio"]:disabled + label::before {
     opacity        : 0.24;
     user-select    : none;
     pointer-events : none;
-    background     : var(--radio-button-bg-colour-disabled);
+    background     : var(--radio-button-bg-disabled);
     box-shadow     : inset 0 2px 8px -2px rgba(0, 0, 0, 0.24);
 }
 

@@ -1,0 +1,137 @@
+/*  For inline code  */
+:not(pre) > code {
+    font-family      : var(--code-inline-font);
+    margin           : 8px 0;
+    border-radius    : 4px;
+    padding          : 2px 8px;
+    border           : none;
+    background-color : var(--code-inline-bg);
+    color            : var(--code-inline-text);
+    font-size        : var(--code-inline-scale);
+    font-weight      : normal;
+    white-space      : pre-wrap;
+}
+
+@media all and (max-width : 720px) {
+    code,
+    :not(pre) > code {
+        word-wrap   : break-word;
+        white-space : normal;
+    }
+
+    pre { padding : 16px; }
+}
+
+/*  For block code  */
+pre {
+    display                : block;
+    width                  : 100%;
+    max-width              : 100%;
+    font-family            : var(--code-block-font);
+    color                  : var(--code-block-text);
+    font-size              : var(--code-block-scale);
+    line-height            : var(--code-block-line-height);
+    font-weight            : 400;
+    padding                : 16px 24px;
+    background-color       : var(--code-block-bg);
+    text-align             : left;
+    overflow               : auto;
+    direction              : ltr;
+    white-space            : pre;
+    word-spacing           : normal;
+    word-break             : normal;
+    letter-spacing         : -0.5px;
+    font-variant-ligatures : none;
+    -webkit-font-smoothing : subpixel-antialiased;
+    -webkit-hyphens        : none;
+    -ms-hyphens            : none;
+    hyphens                : none;
+    border-radius          : 4px;
+    -moz-tab-size          : 4;
+    tab-size               : 4;
+}
+
+pre[class*=language-css],
+pre[class*=language-less],
+pre[class*=language-sass] {
+    color : var(--code-block-text);
+}
+
+pre[class*=language-scss] { color : ${(props: CodeBlockProps) => props.theme.text.code.prism.languages.css.fallback}; }
+
+pre[class*=language-html] { color : ${(props: CodeBlockProps) => props.theme.text.code.prism.languages.html.fallback}; }
+
+pre[class*=language-js] { color : ${(props: CodeBlockProps) => props.theme.text.code.prism.languages.js.fallback}; }
+
+pre[class*=language-json] .token.string {
+    color : ${(props: CodeBlockProps) => props.theme.text.code.prism.languages.json.tokens.string};
+}
+
+.token.tag         { color : var(--code-block-tag); }
+.token.atrule      { color : var(--code-block-atrule); }
+.token.attr-name   { color : var(--code-block-attrName); }
+.token.attr-value  { color : var(--code-block-attrValue); }
+.token.boolean     { color : var(--code-block-boolean); }
+.token.cdata       { color : var(--code-block-cdata); }
+.token.class-name  { color : var(--code-block-className); }
+.token.comment     { color : var(--code-block-comment); }
+.token.constant    { color : var(--code-block-constant); }
+.token.deleted     { color : var(--code-block-deleted); }
+.token.delimiter   { color : var(--code-block-delimiter); }
+.token.doctype     { color : var(--code-block-doctype); }
+.token.entity      { color : var(--code-block-entity); }
+.token.function    { color : var(--code-block-function); }
+.token.hexcode     { color : var(--code-block-hexcode); }
+.token.inserted    { color : var(--code-block-inserted); }
+.token.keyword     { color : var(--code-block-italic); }
+.token.number      { color : var(--code-block-keyword); }
+.token.operator    { color : var(--code-block-namespace); }
+.token.plain       { color : var(--code-block-number); }
+.token.prolog      { color : var(--code-block-operator); }
+.token.property    { color : var(--code-block-plain); }
+.token.punctuation { color : var(--code-block-prolog); }
+.token.regex       { color : var(--code-block-property); }
+.token.selector    { color : var(--code-block-punctuation); }
+.token.string      { color : var(--code-block-regex); }
+.token.symbol      { color : var(--code-block-selector); }
+.token.url         { color : var(--code-block-string); }
+.token.variable    { color : var(--code-block-symbol); }
+.token.namespace   { opacity : 0.72; }
+
+.token.italic { font-style : italic; }
+
+pre::selection,
+code::selection,
+pre::-moz-selection,
+code::-moz-selection,
+pre[class*=language-]::selection,
+code[class*=language-]::selection,
+pre[class*=language-]::-moz-selection,
+code[class*=language-] ::-moz-selection {
+    text-shadow : none;
+    color       : ${(props: CodeBlockProps) => props.theme.text.selection.text};
+    background  : ${(props: CodeBlockProps) => props.theme.text.selection.bg} !important;
+}
+
+
+/*  Keyboard key element  =================================  */
+kbd {
+    display          : inline-block;
+    font-family      : var(--kbd-font);
+    margin           : 0 4px;
+    padding          : 4px 8px;
+    background-color : var(--kbd-bg);
+    color            : var(--kbd-text);
+    cursor           : pointer;
+    font-size        : 14px;
+    line-height      : 1.4;
+    border-radius    : 4px;
+    text-shadow      : 0 1px 0 #fff;
+    box-shadow       : 0 3px 0 0 rgba(0, 0, 0, 0.16);
+    user-select      : none;
+}
+
+kbd:active {
+    transform  : translateY(3px);
+    box-shadow : none;
+}

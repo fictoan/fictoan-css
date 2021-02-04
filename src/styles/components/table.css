@@ -1,0 +1,64 @@
+table {
+    background-color : var(--table-body-bg-default);
+    color            : var(--table-text-default);
+    font-family      : var(--table-font);
+}
+
+table.bordered-rows td,
+table.bordered-rows th,
+table[data-borders-for="rows"] td,
+table[data-borders-for="rows"] th {
+     border              : 0 solid var(--table-border);
+     border-bottom-width : 1px;
+ }
+
+table.bordered-columns td,
+table.bordered-columns th,
+table[data-borders-for="columns"] td,
+table[data-borders-for="columns"] th {
+     border             : 0 solid var(--table-border);
+     border-right-width : 1px;
+ }
+
+table.bordered-both td,
+table.bordered-both th,
+table[data-borders-for="both"] td,
+table[data-borders-for="both"] th { border : 1px solid var(--table-border); }
+
+
+table.padding-all-tiny  th,
+table.padding-all-tiny  td,
+table[data-padding="tiny"] th,
+table[data-padding="tiny"] td { padding : 4px 8px; }
+
+table.padding-all-small th,
+table.padding-all-small td,
+table[data-padding="small"] th,
+table[data-padding="small"] td { padding : 8px 16px; }
+
+table.padding-all-medium th,
+table.padding-all-medium td,
+table[data-padding="medium"] th,
+table[data-padding="medium"] td { padding : 16px 24px; }
+
+table.padding-all-large th,
+table.padding-all-large td,
+table[data-padding="large"] th,
+table[data-padding="large"] td { padding : 24px 32px; }
+
+table.padding-all-huge  th,
+table.padding-all-huge  td,
+table[data-padding="huge"] th,
+table[data-padding="huge"] td { padding : 32px 40px; }
+
+
+table.is-striped thead tr { background-color : var(--table-header-bg); }
+
+table.is-striped tbody tr:not(.is-selected):nth-child(even) { background-color : var(--table-stripe-bg); }
+
+table.is-hoverable tbody tr:hover {
+     background-color : var(--table-body-bg-hover) !important;
+     color            : var(--table-text-hover);
+     transition       : all 0.2s;
+     cursor           : pointer;
+ }

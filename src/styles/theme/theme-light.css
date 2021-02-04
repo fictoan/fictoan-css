@@ -12,7 +12,7 @@
 }
 
 :root {
-    --body-bg-colour : var(--tint);
+    --body-bg        : var(--tint);
     --selection-bg   : var(--hue);
     --selection-text : var(--tint);
 }
@@ -33,6 +33,7 @@
     --global-border-width : 1px;
 }
 
+
 /*  TYPOGRAPHY  ///////////////////////////////////////  */
 /*  FONTS  ------------------------  */
 :root {
@@ -43,9 +44,9 @@
 
 /*  HEADINGS  ---------------------  */
 :root {
-    --headings-font-family     : var(--font-sans);
+    --headings-font            : var(--font-sans);
     --headings-font-weight     : 600;
-    --headings-text-colour     : var(--shade);
+    --headings-text            : var(--shade);
     --headings-line-height     : 1.4em;
     --headings-base-size       : 1;
     --headings-size-multiplier : 1.24;
@@ -53,151 +54,221 @@
 
 /*  PARAS  ------------------------  */
 :root {
-    --paras-font-family : var(--font-sans);
+    --paras-font        : var(--font-sans);
     --paras-font-weight : 400;
     --paras-font-size   : 1em;
-    --paras-text-colour : var(--shade);
+    --paras-text        : var(--shade);
     --paras-line-height : 1.2em;
 }
 
 /*  LINKS  ------------------------  */
 :root {
-    --links-font-family    : var(--font-sans);
-    --links-font-weight    : 400;
+    --links-font        : var(--font-sans);
+    --links-font-weight : 400;
 
-    --links-default-colour : var(--hue);
-    --links-hover-colour   : var(--hue);
+    --links-default     : var(--hue);
+    --links-hover       : var(--hue);
 }
 
 /*  CODE  -------------------------  */
 :root {
-    --code-font-family : var(--font-mono);
+    --code-inline-font       : var(--font-mono);
+    --code-inline-bg         : var(--blue10);
+    --code-inline-text       : var(--blue90);
+    --code-inline-scale      : 80%;
 
-    --code-text-colour : var(--analogue);
-    --code-bg-colour   : var(--analogue);
+    --code-block-font        : var(--font-mono);
+    --code-block-bg          : var(--blue10);
+    --code-block-text        : var(--blue90);
+    --code-block-scale       : 80%;
+    --code-block-line-height : 1.8;
+
+    --code-block-tag         : var(--violet);
+    --code-block-atrule      : var(--teal90);
+    --code-block-attrName    : var(--orange);
+    --code-block-attrValue   : var(--green80);
+    --code-block-boolean     : var(--green80);
+    --code-block-cdata       : var(--grey70);
+    --code-block-className   : var(--red);
+    --code-block-comment     : var(--grey70);
+    --code-block-constant    : var(--green80);
+    --code-block-deleted     : var(--slate80);
+    --code-block-delimiter   : var(--grey90);
+    --code-block-doctype     : var(--grey90);
+    --code-block-entity      : var(--green80);
+    --code-block-function    : var(--orange);
+    --code-block-hexcode     : var(--green);
+    --code-block-inserted    : var(--green80);
+    --code-block-italic      : var(--green80);
+    --code-block-keyword     : var(--orange90);
+    --code-block-namespace   : var(--green80);
+    --code-block-number      : var(--green80);
+    --code-block-operator    : var(--pistachio);
+    --code-block-plain       : var(--grey);
+    --code-block-prolog      : var(--grey90);
+    --code-block-property    : var(--red90);
+    --code-block-punctuation : var(--grey60);
+    --code-block-regex       : var(--green80);
+    --code-block-selector    : var(--violet);
+    --code-block-string      : var(--crimson60);
+    --code-block-symbol      : var(--green80);
+    --code-block-url         : var(--green80);
+    --code-block-variable    : var(--orange80);
+
+    --kbd-font               : var(--font-mono);
+    --kbd-bg                 : var(--grey10);
+    --kbd-text               : var(--grey);
 }
 
 
 /*  CARD  /////////////////////////////////////////////  */
 :root {
     --card-border-width  : 1px;
-    --card-border-colour : var(--slate10);
+    --card-border        : var(--slate10);
     --card-border-radius : var(--global-curve-radius);
-    --card-bg-colour     : var(--white);
+    --card-bg            : var(--white);
 }
+
 
 /*  INPUT  ////////////////////////////////////////////  */
 :root {
-    --input-font-family                   : var(--font-sans);
-    --input-border-radius                 : 4px;
-    --input-label-text-size               : 14px;
-    --input-label-help-text-colour        : var(--slate80);
-    --input-error-text-colour             : var(--red90);
+    --input-font                   : var(--font-sans);
+    --input-border-radius          : 4px;
+    --input-label-text-size        : 14px;
+    --input-label-help-text        : var(--slate80);
+    --input-error-text             : var(--red90);
 
-    --input-text-colour-default           : var(--shade);
-    --input-bg-colour-default             : var(--white);
-    --input-border-colour-default         : var(--slate40);
-    --input-label-text-colour-default     : var(--shade);
-    --input-label-required-colour-default : var(--red90);
+    --input-text-default           : var(--shade);
+    --input-bg-default             : var(--white);
+    --input-border-default         : var(--slate40);
+    --input-label-text-default     : var(--shade);
+    --input-label-required-default : var(--red90);
 
 
-    --input-text-colour-focus             : var(--shade);
-    --input-bg-colour-focus               : var(--white);
-    --input-border-colour-focus           : var(--hue);
+    --input-text-focus             : var(--shade);
+    --input-bg-focus               : var(--white);
+    --input-border-focus           : var(--hue);
 
-    --input-bg-colour-invalid             : var(--red10);
-    --input-border-colour-invalid         : var(--red40);
-    --input-label-text-colour-invalid     : var(--shade);
+    --input-bg-invalid             : var(--red10);
+    --input-border-invalid         : var(--red40);
+    --input-label-text-invalid     : var(--shade);
 }
+
 
 /*  TEXTAREA  /////////////////////////////////////////  */
 :root {
-    --textarea-bg-colour     : var(--slate20);
-    --textarea-text-colour   : var(--slate20);
-    --textarea-border-colour : var(--slate20);
+    --textarea-bg     : var(--slate20);
+    --textarea-text   : var(--slate20);
+    --textarea-border : var(--slate20);
 }
+
 
 /*  BUTTON  ///////////////////////////////////////////  */
 :root {
-    --button-font-family                     : var(--font-sans);
-    --button-border-radius                   : 4px;
+    --button-font                     : var(--font-sans);
+    --button-border-radius            : 4px;
 
     /*  PRIMARY  ------------------  */
-    --button-primary-bg-colour-default       : var(--hue);
-    --button-primary-border-colour-default   : var(--hue);
-    --button-primary-text-colour-default     : var(--white);
+    --button-primary-bg-default       : var(--hue);
+    --button-primary-border-default   : var(--hue);
+    --button-primary-text-default     : var(--white);
 
-    --button-primary-bg-colour-hover         : var(--hue);
-    --button-primary-border-colour-hover     : var(--hue);
-    --button-primary-text-colour-hover       : var(--white);
+    --button-primary-bg-hover         : var(--hue);
+    --button-primary-border-hover     : var(--hue);
+    --button-primary-text-hover       : var(--white);
 
-    --button-primary-bg-colour-active        : var(--hue);
-    --button-primary-border-colour-active    : var(--hue);
-    --button-primary-text-colour-active      : var(--white);
+    --button-primary-bg-active        : var(--hue);
+    --button-primary-border-active    : var(--hue);
+    --button-primary-text-active      : var(--white);
 
-    --button-primary-spinner-colour          : var(--white);
+    --button-primary-spinner          : var(--white);
 
     /*  SECONDARY  ----------------  */
-    --button-secondary-bg-colour-default     : var(--crimson20);
-    --button-secondary-border-colour-default : var(--crimson20);
-    --button-secondary-text-colour-default   : var(--hue);
+    --button-secondary-bg-default     : var(--blue20);
+    --button-secondary-border-default : var(--hue);
+    --button-secondary-text-default   : var(--hue);
 
-    --button-secondary-bg-colour-hover       : var(--crimson20);
-    --button-secondary-border-colour-hover   : var(--crimson20);
-    --button-secondary-text-colour-hover     : var(--hue);
+    --button-secondary-bg-hover       : var(--blue20);
+    --button-secondary-border-hover   : var(--hue);
+    --button-secondary-text-hover     : var(--hue);
 
-    --button-secondary-bg-colour-active      : var(--crimson10);
-    --button-secondary-border-colour-active  : var(--crimson10);
-    --button-secondary-text-colour-active    : var(--hue);
+    --button-secondary-bg-active      : var(--blue10);
+    --button-secondary-border-active  : var(--hue);
+    --button-secondary-text-active    : var(--hue);
 
-    --button-secondary-spinner-colour        : var(--white);
+    --button-secondary-spinner        : var(--white);
 
-    --button-custom-spinner-colour           : var(--white);
+    --button-custom-spinner           : var(--white);
 }
 
-/*  HRULE  ////////////////////////////////////////////  */
+
+/*  H-RULE  ///////////////////////////////////////////  */
 :root {
-    --hrule-primary-bg-colour   : var(--slate80);
-    --hrule-primary-height      : 1px;
+    --hrule-primary-bg       : var(--slate80);
+    --hrule-primary-height   : 1px;
 
-    --hrule-secondary-bg-colour : var(--slate40);
-    --hrule-secondary-height    : 1px;
+    --hrule-secondary-bg     : var(--slate40);
+    --hrule-secondary-height : 1px;
 
-    --hrule-tertiary-bg-colour  : var(--slate20);
-    --hrule-tertiary-height     : 1px;
+    --hrule-tertiary-bg      : var(--slate20);
+    --hrule-tertiary-height  : 1px;
 }
+
 
 /*  RADIO BUTTON  /////////////////////////////////////  */
 :root {
-    --radio-button-font-family            : var(--font-sans);
-    --radio-button-text-colour            : var(--paras-text-colour);
-    --radio-button-bg-colour-default      : var(--slate20);
+    --radio-button-font            : var(--font-sans);
+    --radio-button-text            : var(--paras-text);
+    --radio-button-bg-default      : var(--slate20);
 
-    --radio-button-bg-colour-hover        : var(--slate40);
+    --radio-button-bg-hover        : var(--slate40);
 
-    --radio-button-circle-colour-selected : var(--white);
-    --radio-button-bg-colour-selected     : var(--hue);
+    --radio-button-circle-selected : var(--white);
+    --radio-button-bg-selected     : var(--hue);
 
-    --radio-button-bg-colour-disabled     : var(--slate10);
+    --radio-button-bg-disabled     : var(--slate10);
 }
+
 
 /*  CHECKBOX  /////////////////////////////////////////  */
 :root {
-    --checkbox-font-family          : var(--font-sans);
-    --checkbox-text-colour          : var(--paras-text-colour);
-    --checkbox-bg-colour-default    : var(--slate20);
+    --checkbox-font          : var(--font-sans);
+    --checkbox-text          : var(--paras-text);
+    --checkbox-bg-default    : var(--slate20);
 
-    --checkbox-bg-colour-hover      : var(--slate40);
+    --checkbox-bg-hover      : var(--slate40);
 
-    --checkbox-check-colour-checked : var(--white);
-    --checkbox-bg-colour-checked    : var(--hue);
+    --checkbox-check-checked : var(--white);
+    --checkbox-bg-checked    : var(--hue);
 
-    --checkbox-bg-colour-disabled   : var(--slate10);
+    --checkbox-bg-disabled   : var(--slate10);
 }
+
 
 /*  TOGGLE SWITCH  ////////////////////////////////////  */
 :root {
-    --toggle-switch-bg-colour-default : var(--slate20);
-    --toggle-switch-bg-colour-hover   : var(--slate40);
-    --toggle-switch-bg-colour-checked : var(--hue);
+    --toggle-switch-bg-default : var(--slate20);
+    --toggle-switch-bg-hover   : var(--slate40);
+    --toggle-switch-bg-checked : var(--hue);
+}
+
+
+/*  SELECT DROPDOWN  //////////////////////////////////  */
+:root {
+    --select-chevron-border : var(--slate40);
+}
+
+
+/*  TABLE  ////////////////////////////////////////////  */
+:root {
+    --table-font            : var(--font-sans);
+    --table-header-bg       : var(--blue20);
+    --table-border          : var(--slate40);
+    --table-stripe-bg       : var(--slate20);
+
+    --table-body-bg-default : var(--white);
+    --table-text-default    : var(--shade);
+
+    --table-body-bg-hover   : var(--amber20);
+    --table-text-hover      : var(--shade);
 }
