@@ -1,6 +1,6 @@
 {
     "name": "fictoan-css",
-    "version": "0.17.0",
+    "version": "0.17.1",
     "description": "The plain CSS version of Fictoan",
     "main": "index.html",
     "scripts": {

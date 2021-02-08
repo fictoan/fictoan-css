@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap");
 
 
-/*  COLOURS  //////////////////////////////////////////  */
+/*  GLOBALS  //////////////////////////////////////////  */
 :root {
     --hue      : hsl(212, 100%, 54%);
     --tint     : hsl(212, 100%, 98%);
@@ -16,6 +16,7 @@
     --selection-bg   : var(--hue);
     --selection-text : var(--tint);
 }
+
 
 :root {
     --none   : 0;
@@ -72,52 +73,63 @@
 
 /*  CODE  -------------------------  */
 :root {
-    --code-inline-font       : var(--font-mono);
-    --code-inline-bg         : var(--blue10);
-    --code-inline-text       : var(--blue90);
-    --code-inline-scale      : 80%;
+    --code-inline-font          : var(--font-mono);
+    --code-inline-bg            : var(--blue10);
+    --code-inline-text          : var(--blue90);
+    --code-inline-scale         : 80%;
 
-    --code-block-font        : var(--font-mono);
-    --code-block-bg          : var(--blue10);
-    --code-block-text        : var(--blue90);
-    --code-block-scale       : 80%;
-    --code-block-line-height : 1.8;
+    --code-block-font           : var(--font-mono);
+    --code-block-bg             : var(--blue10);
+    --code-block-text           : var(--blue90);
+    --code-block-scale          : 80%;
+    --code-block-line-height    : 1.8;
 
-    --code-block-tag         : var(--violet);
-    --code-block-atrule      : var(--teal90);
-    --code-block-attrName    : var(--orange);
-    --code-block-attrValue   : var(--green80);
-    --code-block-boolean     : var(--green80);
-    --code-block-cdata       : var(--grey70);
-    --code-block-className   : var(--red);
-    --code-block-comment     : var(--grey70);
-    --code-block-constant    : var(--green80);
-    --code-block-deleted     : var(--slate80);
-    --code-block-delimiter   : var(--grey90);
-    --code-block-doctype     : var(--grey90);
-    --code-block-entity      : var(--green80);
-    --code-block-function    : var(--orange);
-    --code-block-hexcode     : var(--green);
-    --code-block-inserted    : var(--green80);
-    --code-block-italic      : var(--green80);
-    --code-block-keyword     : var(--orange90);
-    --code-block-namespace   : var(--green80);
-    --code-block-number      : var(--green80);
-    --code-block-operator    : var(--pistachio);
-    --code-block-plain       : var(--grey);
-    --code-block-prolog      : var(--grey90);
-    --code-block-property    : var(--red90);
-    --code-block-punctuation : var(--grey60);
-    --code-block-regex       : var(--green80);
-    --code-block-selector    : var(--violet);
-    --code-block-string      : var(--crimson60);
-    --code-block-symbol      : var(--green80);
-    --code-block-url         : var(--green80);
-    --code-block-variable    : var(--orange80);
+    --code-block-tag            : var(--violet);
+    --code-block-atrule         : var(--teal90);
+    --code-block-attrName       : var(--orange);
+    --code-block-attrValue      : var(--green80);
+    --code-block-boolean        : var(--green80);
+    --code-block-cdata          : var(--grey70);
+    --code-block-className      : var(--red);
+    --code-block-comment        : var(--grey70);
+    --code-block-constant       : var(--green80);
+    --code-block-deleted        : var(--slate80);
+    --code-block-delimiter      : var(--grey90);
+    --code-block-doctype        : var(--grey90);
+    --code-block-entity         : var(--green80);
+    --code-block-function       : var(--orange);
+    --code-block-hexcode        : var(--green);
+    --code-block-inserted       : var(--green80);
+    --code-block-italic         : var(--green80);
+    --code-block-keyword        : var(--orange90);
+    --code-block-namespace      : var(--green80);
+    --code-block-number         : var(--green80);
+    --code-block-operator       : var(--pistachio);
+    --code-block-plain          : var(--grey);
+    --code-block-prolog         : var(--grey90);
+    --code-block-property       : var(--red90);
+    --code-block-punctuation    : var(--grey60);
+    --code-block-regex          : var(--green80);
+    --code-block-selector       : var(--violet);
+    --code-block-string         : var(--crimson60);
+    --code-block-symbol         : var(--green80);
+    --code-block-url            : var(--green80);
+    --code-block-variable       : var(--orange80);
 
-    --kbd-font               : var(--font-mono);
-    --kbd-bg                 : var(--grey10);
-    --kbd-text               : var(--grey);
+    --kbd-font                  : var(--font-mono);
+    --kbd-bg                    : var(--grey10);
+    --kbd-text                  : var(--grey);
+
+    --code-selection-text       : var(--white);
+    --code-selection-bg         : var(--accent);
+
+    --code-language-css         : var(--orange80);
+    --code-language-html        : var(--grey);
+    --code-language-js          : var(--violet90);
+    --code-language-json        : var(--teal);
+    --code-language-json-string : var(--teal);
+
+
 }
 
 

@@ -53,18 +53,17 @@ pre {
 
 pre[class*=language-css],
 pre[class*=language-less],
-pre[class*=language-sass] {
-    color : var(--code-block-text);
+pre[class*=language-sass],
+pre[class*=language-scss] {
+    color : var(--code-language-css);
 }
 
-pre[class*=language-scss] { color : ${(props: CodeBlockProps) => props.theme.text.code.prism.languages.css.fallback}; }
+pre[class*=language-html] { color : var(--code-language-html); }
 
-pre[class*=language-html] { color : ${(props: CodeBlockProps) => props.theme.text.code.prism.languages.html.fallback}; }
-
-pre[class*=language-js] { color : ${(props: CodeBlockProps) => props.theme.text.code.prism.languages.js.fallback}; }
+pre[class*=language-js] { color : var(--code-language-js); }
 
 pre[class*=language-json] .token.string {
-    color : ${(props: CodeBlockProps) => props.theme.text.code.prism.languages.json.tokens.string};
+    color : var(--code-language-json-string);
 }
 
 .token.tag         { color : var(--code-block-tag); }
@@ -109,8 +108,8 @@ code[class*=language-]::selection,
 pre[class*=language-]::-moz-selection,
 code[class*=language-] ::-moz-selection {
     text-shadow : none;
-    color       : ${(props: CodeBlockProps) => props.theme.text.selection.text};
-    background  : ${(props: CodeBlockProps) => props.theme.text.selection.bg} !important;
+    color       : var(--code-selection-text);
+    background  : var(--code-selection-bg);
 }
 
 

@@ -87,18 +87,18 @@ hr[data-side-margin="huge"] { width: calc(100% - 48vw); }
 
 hr.primary,
 hr[data-kind="primary"] {
-     background-color : var(--hrule-primary-bg-colour);
+     background-color : var(--hrule-primary-bg);
      height           : var(--hrule-primary-height);
 }
 
 hr.secondary,
 hr[data-kind="secondary"] {
-     background-color : var(--hrule-secondary-bg-colour);
+     background-color : var(--hrule-secondary-bg);
      height           : var(--hrule-secondary-height);
 }
 
 hr.tertiary,
 hr[data-kind="tertiary"] {
-     background-color : var(--hrule-tertiary-bg-colour);
+     background-color : var(--hrule-tertiary-bg);
      height           : var(--hrule-tertiary-height);
 }

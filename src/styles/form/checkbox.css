@@ -37,7 +37,7 @@ input[type="checkbox"] + label {
     display        : inline-flex;
     position       : relative;
     font-family    : var(--checkbox-font);
-    color          : var(--checkbox-text-colour);
+    color          : var(--checkbox-text);
     cursor         : pointer;
     vertical-align : middle;
     line-height    : unset;

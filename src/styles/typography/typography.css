@@ -11,7 +11,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family : var(--headings-font);
     font-weight : var(--headings-font-weight);
-    color       : var(--headings-text-colour);
+    color       : var(--headings-text);
     line-height : var(--headings-line-height);
     margin      : 0;
 }
@@ -39,7 +39,7 @@ h6 { font-size : calc(var(--headings-size-multiplier) * 1.2em); }
 /*  BODY TEXT  ////////////////////////////////////////  */
 p {
     font-family : var(--paras-font);
-    color       : var(--paras-text-colour);
+    color       : var(--paras-text);
 }
 
 
@@ -74,13 +74,13 @@ p[data-size="huge"] { font-size : 160%; }
 a {
     cursor      : pointer;
     font-family : var(--links-font);
-    color       : var(--links-default-colour);
+    color       : var(--links-default);
     font-weight : bold;
     transition  : all 0.2s;
     width       : fit-content;
 }
 
-a:not(.ff-button):hover { color : var(--links-hover-colour); }
+a:not(.ff-button):hover { color : var(--links-hover); }
 
 a:active { opacity: 0.72; }
 
